@@ -19,9 +19,15 @@
   src: url("../fonts/MOON\ 2.0\ FREE/Legacy\ MOON\ Files/Moon\ Bold.otf");
 }
 
+#container {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  border: 3px solid red;
+}
 
 body {
-  min-height: 100vh;
+  
   /* margin: 0; */
   background-color: rgb(93, 218, 149);
   display: flex;
@@ -33,6 +39,8 @@ body {
 body header {
 border-bottom: 2px solid rgb(38, 89, 161);
 }
+
+
 
 header {
   display: flex;
@@ -60,23 +68,73 @@ header a {
   margin-right: auto;
 }
 
+.flex-container {
+  /* list-style: none; */
+  
+    -ms-box-orient: horizontal;
+}
+
+.column {
+  flex-direction: row;
+}
+
+/* .sidebar {
+  max-width: 20em;
+}
+
+.sidebar, main {
+  flex-direction: row;
+} */
+
+#sidebar {
+  float: left;
+  margin-left: 1em;
+  margin-right: 3em;
+  padding-left: 2em;
+  min-width: 10em;
+  max-width: 300em;
+  /* background-color: #02a8ea0a; */
+  min-height: 100vh;
+  border-right: 2px solid rgb(237, 244, 224);
+  border-left: 2px solid rgb(237, 244, 224);
+}
+
+#sidebar ul li {
+  margin-bottom: 1em;
+}
+
+#sidebar ul li a {
+  color: black;
+}
+
 a,
 a:hover,
 a:focus,
 a:active {
   text-decoration: none;
   color: rgb(38, 89, 161);
-  -webkit-text-stroke: 0.5px rgb(38, 89, 161);
+  -webkit-text-stroke: 0.5px black;
+}
+
+a:hover {
+  color:rgb(237, 244, 224);
+  -webkit-text-stroke: 1px rgb(237, 244, 224);
 }
 
 main {
   flex: 1;
+  /* float: right; */
   font-size: larger;
+  margin-left: 200px;
 }
 
 h1 {
   font-family: modernSansFontBold;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+p {
+  line-height: 1.5em;
 }
 
 footer {
