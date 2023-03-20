@@ -1,0 +1,19 @@
+body {
+  min-height: 100vh;
+  /* margin: 0; */
+  background-color: sandybrown;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  min-height: 50px;
+}
+
+#logo {
+  max-width: 10em;
+}
