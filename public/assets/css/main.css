@@ -1,19 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@font-face {
+  font-family: modernSansFontRegular;
+  src: url("../fonts/MOON\ 2.0\ FREE/Moon2.0-Regular.otf");
+}
+
+@font-face {
+  font-family: modernSansFontBold;
+  src: url("../fonts/MOON\ 2.0\ FREE/Moon2.0-Bold.otf");
+}
+
+@font-face {
+  font-family: modernSansFontLegacyBold;
+  src: url("../fonts/MOON\ 2.0\ FREE/Legacy\ MOON\ Files/Moon\ Bold.otf");
+}
+
+
 body {
   min-height: 100vh;
   /* margin: 0; */
-  background-color: sandybrown;
+  background-color: rgb(93, 218, 149);
   display: flex;
   flex-direction: column;
+  
+  font-family: modernSansFontRegular;
+}
+
+body header {
+border-bottom: 2px solid rgb(38, 89, 161);
+}
+
+header {
+  display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0em 7px 25px rgb(237, 244, 224);
+}
+
+
+
+
+header li, ul {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 28px;
+}
+
+header li {
+  transition: 0.5s;
+}
+
+header a {
+  margin-right: auto;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: rgb(38, 89, 161);
+  -webkit-text-stroke: 0.5px rgb(38, 89, 161);
 }
 
 main {
   flex: 1;
+  font-size: larger;
+}
+
+h1 {
+  font-family: modernSansFontBold;
+  margin-bottom: 0.5em;
 }
 
 footer {
   min-height: 50px;
 }
 
+main, footer {
+  font-family: modernSansFontRegular;
+    color: rgb(237, 244, 224);
+    margin-left: 5em;
+    margin-top: 3em;
+    margin-right: 4em;
+}
+
 #logo {
-  max-width: 10em;
+  max-width: 15em;
+  margin: -15px;
+  margin-bottom: -25px;
+
 }
