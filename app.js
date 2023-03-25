@@ -4,20 +4,31 @@ const app = express();
 app.use(express.static("public"));
 
 import templateEngine from "./util/templateEngine.js";
+import { getSubjects } from "./util/subjects/subjects.js";
+// Routers
 
 
 
 // Universal - root path for all pages
-const partOfPath = "./public/pages/";
+const extension = "/";
+const partOfPath = "./public/pages" + extension;
 
+let topicsNavbar = getSubjects();
+console.log(topicsNavbar);
 
 
 // Constructed pages
+
+// Frontpage
 const frontpagePath = templateEngine.readPage(partOfPath + "frontpage/frontpage.html");
-const frontpagePage = templateEngine.renderPage(frontpagePath, {
-  tabTitle: "Mandatory | Welcome"
+const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
+  tabTitle: "Mandatory | Welcome",
+  cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css" />`,
+  topics: templateEngine.renderListElements(topicsNavbar, extension)
 });
 
+
+// About page
 const aboutPath = templateEngine.readPage(partOfPath + "about/about.html");
 const aboutPage = templateEngine.renderPage(aboutPath, {
   tabTitle: "Mandatory | About"
@@ -28,6 +39,13 @@ const aboutPage = templateEngine.renderPage(aboutPath, {
 app.get("/", (req, res) => {
   res.send(frontpagePage)
 });
+
+
+import { router as loopsRouter } from "./util/routers/loops.js";
+// Loops
+app.use("/loops", loopsRouter);
+
+
 
 app.get("/about", (req, res) => {
   res.send(aboutPage)

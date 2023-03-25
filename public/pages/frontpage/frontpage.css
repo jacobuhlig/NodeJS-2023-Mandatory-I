@@ -1,0 +1,11 @@
+h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 3em;
+    font-size: 60px;
+
+}
+
+main {
+    flex: 1;
+}
