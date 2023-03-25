@@ -7,7 +7,7 @@ import templateEngine from "./util/templateEngine.js";
 
 
 
-
+// Universal - root path for all pages
 const partOfPath = "./public/pages/";
 
 
@@ -19,7 +19,7 @@ const frontpagePage = templateEngine.renderPage(frontpagePath, {
 });
 
 const aboutPath = templateEngine.readPage(partOfPath + "about/about.html");
-const aboutPage = templateEngine.renderPage(aboutPath,  {
+const aboutPage = templateEngine.renderPage(aboutPath, {
   tabTitle: "Mandatory | About"
 });
 
