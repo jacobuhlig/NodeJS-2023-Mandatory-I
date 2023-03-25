@@ -14,6 +14,11 @@
   src: url("../fonts/MOON\ 2.0\ FREE/Legacy\ MOON\ Files/Moon\ Bold.otf");
 }
 
+@font-face {
+  font-family: interRegular;
+  src: url("../fonts/Inter/static/Inter-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +47,7 @@ main aside {
 main article {
   display: flex;
   flex-direction: column;
+  margin-left: 3em;
 }
 
 .content {
@@ -70,7 +76,10 @@ header {
 }
 
 header li, ul {
-    list-style: none;
+  list-style: none;
+}
+
+header li {
     display: inline-block;
     padding: 0 20px;
     font-size: 28px;
@@ -86,9 +95,9 @@ header a {
 
 aside {
   /* margin-left: 1em; */
-  margin-right: 4em;
-  padding-left: 2em;
-  padding-top: 2em;
+  /* margin-right: 4em; */
+  /* padding-left: 2em; */
+  padding-top: 2.5em;
   min-width: 10em;
   max-width: 300em;
   
@@ -100,10 +109,21 @@ aside {
 
 aside ul li {
   margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #10558d;
+}
+
+aside ul li:first-child {
+  padding-top: 1em;
+  border-top: 1px solid #10558d;
 }
 
 aside ul li a {
   color: white;
+  /* padding-left: 3em; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 a,
@@ -115,20 +135,27 @@ a:active {
   /* -webkit-text-stroke: 0.5px black; */
 }
 
-/* a:hover {
-  color:rgb(237, 244, 224);
-  -webkit-text-stroke: 1px rgb(237, 244, 224);
-} */
+aside a:hover {
+  color: #23AFAC;
+  -webkit-text-stroke: 0.2px rgb(237, 244, 224);
+}
+
+header a:hover {
+  color: #2326AF;
+  -webkit-text-stroke: 0.5px black;
+}
 
 
 h1 {
-  font-family: modernSansFontBold;
+  font-family: modernSansFontRegular;
+  font-size: 2em;
   color: rgb(38, 89, 161);
   margin-bottom: 1em;
 }
 
 p {
   line-height: 1.5em;
+  font-size: 1.2em;
 }
 
 footer {
@@ -139,6 +166,7 @@ footer {
 footer p {
   margin-top: 0.3em;
   margin-left: 4em;
+  font-size: 1em;
 }
 
 main, footer {
@@ -150,8 +178,6 @@ main, footer {
 }
 
 #logo {
-  max-width: 15em;
-  margin: -15px;
-  margin-bottom: -25px;
-
+  max-width: 6em;
+  margin: -0.5em 0 -0.4em 1em;
 }
