@@ -4,5 +4,9 @@
         "navbar2",
         "navbar3",
         "about"
+    ],
+    "loops": [
+        "loops",
+        "forEach"
     ]
 }

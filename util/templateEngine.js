@@ -36,21 +36,55 @@ function renderFrontpage(page, config = {}) {
 
 function renderListElements(arrayOfStrings, extension) {
 
-  let length = arrayOfStrings.length;
   let result = "";
+
+  const length = arrayOfStrings.length;
 
   console.log(1, arrayOfStrings);
 
   for (let i = 0; i < length; i++) {
     const endpoint = arrayOfStrings[i];
     const visualElement = capitalizeFirstLetter(arrayOfStrings[i]);
-    const link = `<li><a href="${extension + endpoint}">${visualElement}</a></li>`;
-    result += link;
+    if (i === 0) {
+      const placeholder = extension;
+      extension = "/";
+      const link = `<li><a href="${extension + endpoint}">${visualElement}</a></li>`;
+      result += link;
+      extension = placeholder;
+    } else {
+      const link = `<li><a href="${extension + endpoint}">${visualElement}</a></li>`;
+      result += link;
+    }
   }
 
   return result;
 }
 
+function renderListElements2(arrayOfStrings, extension, currentPath) {
+
+  let result = "";
+  const length = arrayOfStrings.length;
+
+  console.log(`Current path: ${currentPath}`);
+  /* currentPath = currentPath + extension */
+  console.log(`Current path: ${currentPath}`);
+
+  for (let i = 0; i < length; i++) {
+    const endpoint = arrayOfStrings[i];
+    const visualElement = capitalizeFirstLetter(arrayOfStrings[i]);
+    const link = `<li><a href="${currentPath}">${visualElement}</a></li>`;
+    result += link;
+    /* if (extension === endpoint) {
+      const link = `<li><a href="${endpoint}">${visualElement}</a></li>`;
+      result += link;
+    } else {
+      const link = `<li><a href="${extension + "/" + endpoint}">${visualElement}</a></li>`;
+      result += link;
+    } */
+  }
+
+  return result;
+}
 
 function capitalizeFirstLetter(string) {
 
@@ -68,5 +102,6 @@ export default {
   renderPage,
   renderFrontpage,
   renderListElements,
+  renderListElements2,
   readPage
 };

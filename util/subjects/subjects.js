@@ -1,10 +1,17 @@
-import subjects from './subjects.json' assert { type: "json" };
+import subjectsData from './subjects.json' assert { type: "json" };
 
+/* const { subjects } = subjectsData.subjects;
+const { loops } = subjectsData.loops; */
 
-function getSubjects() {
-    return subjects;
+export function getSubjects() {
+    return subjectsData.subjects;
 }
 
-export {
-    getSubjects
+export function getLoops() {
+    return subjectsData.loops;
+}
+
+export default {
+    getSubjects,
+    getLoops
 };

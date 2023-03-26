@@ -5,6 +5,7 @@ app.use(express.static("public"));
 
 import templateEngine from "./util/templateEngine.js";
 import { getSubjects } from "./util/subjects/subjects.js";
+const topicsNavbar = getSubjects();
 // Routers
 
 
@@ -13,7 +14,6 @@ import { getSubjects } from "./util/subjects/subjects.js";
 const extension = "/";
 const partOfPath = "./public/pages" + extension;
 
-let topicsNavbar = getSubjects();
 console.log(topicsNavbar);
 
 
@@ -21,11 +21,6 @@ console.log(topicsNavbar);
 
 // Frontpage
 const frontpagePath = templateEngine.readPage(partOfPath + "frontpage/frontpage.html");
-const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
-  tabTitle: "Mandatory | Welcome",
-  cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css" />`,
-  topics: templateEngine.renderListElements(topicsNavbar, extension)
-});
 
 
 // About page
@@ -37,6 +32,11 @@ const aboutPage = templateEngine.renderPage(aboutPath, {
 
 // Endpoints
 app.get("/", (req, res) => {
+  const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
+    tabTitle: "Mandatory | Welcome",
+    cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css" />`,
+    topics: templateEngine.renderListElements(topicsNavbar, extension.slice(0, -1), req.path)
+  });
   res.send(frontpagePage)
 });
 
