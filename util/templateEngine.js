@@ -72,15 +72,21 @@ function renderListElements2(arrayOfStrings, extension, currentPath) {
   for (let i = 0; i < length; i++) {
     const endpoint = arrayOfStrings[i];
     const visualElement = capitalizeFirstLetter(arrayOfStrings[i]);
-    const link = `<li><a href="${currentPath}">${visualElement}</a></li>`;
-    result += link;
-    /* if (extension === endpoint) {
-      const link = `<li><a href="${endpoint}">${visualElement}</a></li>`;
+    /* const link = `<li><a href="${currentPath}">${visualElement}</a></li>`; */
+    /* result += link; */
+    /* extension === endpoint */
+    console.log(currentPath);
+    const length = currentPath.split("/").length;
+    console.log(length);
+    const array = currentPath.split("/");
+    console.log(array);
+    if (length > 1) {
+      const link = `<li><a href="${currentPath}">${visualElement}</a></li>`;
       result += link;
     } else {
       const link = `<li><a href="${extension + "/" + endpoint}">${visualElement}</a></li>`;
       result += link;
-    } */
+    }
   }
 
   return result;

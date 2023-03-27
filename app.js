@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
   const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
     tabTitle: "Mandatory | Welcome",
     cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css" />`,
-    topics: templateEngine.renderListElements(topicsNavbar, extension.slice(0, -1), req.path)
+    topics: templateEngine.renderListElements(topicsNavbar, extension.slice(0, -1), req.originalUrl)
   });
   res.send(frontpagePage)
 });

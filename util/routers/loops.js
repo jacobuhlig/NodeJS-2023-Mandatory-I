@@ -23,8 +23,8 @@ const forEachPath = templateEngine.readPage(partOfPath + "/forEach/forEach.html"
 router.get("/", (req, res) => {
     const loopsPage = templateEngine.renderPage(loopsPath, {
         tabTitle: "Mandatory | Loops",
-        subTopics: templateEngine.renderListElements2(arrayOfStrings, extension, req.path),
-        topics: templateEngine.renderListElements2(topicsNavbar, extension, req.path)
+        subTopics: templateEngine.renderListElements2(arrayOfStrings, extension, req.originalUrl),
+        topics: templateEngine.renderListElements2(topicsNavbar, extension, req.originalUrl)
     });
     res.send(loopsPage);
 });
@@ -32,8 +32,8 @@ router.get("/", (req, res) => {
 router.get("/forEach/", (req, res) => {
     const forEachPage = templateEngine.renderPage(forEachPath, {
         tabTitle: "Loops | ForEach",
-        subTopics: templateEngine.renderListElements2(arrayOfStrings, extension, req.path),
-        topics: templateEngine.renderListElements2(topicsNavbar, extension, req.path)
+        subTopics: templateEngine.renderListElements2(arrayOfStrings, extension, req.originalUrl),
+        topics: templateEngine.renderListElements2(topicsNavbar, extension, req.originalUrl)
     });
     res.send(forEachPage);
 });
