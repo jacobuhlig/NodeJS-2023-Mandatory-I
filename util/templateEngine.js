@@ -47,11 +47,11 @@ function renderListElements(arrayOfStrings, endpoint) {
     const visualElement = capitalizeWords(arrayOfStrings[i]);
 
 
-    let containsAboutAndLoops = false;
 
     /* Below should be revised, since I need the actual path, in order to make something flexible and dynamic. 
     ${containsAboutAndLoops ? "class=\"active\"" : ""}
     */
+    /* let containsAboutAndLoops = false; */
     /* if (arrayOfStrings.includes("about") && arrayOfStrings.includes("loops")) {
       containsAboutAndLoops = true;
     } */
