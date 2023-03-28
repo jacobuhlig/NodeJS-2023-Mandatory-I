@@ -11,7 +11,12 @@ export function getLoops() {
     return subjectsData.loops;
 }
 
+export function getAbout() {
+    return subjectsData.about;
+}
+
 export default {
     getSubjects,
-    getLoops
+    getLoops,
+    getAbout
 };

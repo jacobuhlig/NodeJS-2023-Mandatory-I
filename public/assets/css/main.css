@@ -33,11 +33,12 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
 }
 
 main {
-  overflow: hidden;
   display: flex;
+  overflow: hidden;
 }
 
 main aside {
@@ -48,6 +49,15 @@ main article {
   display: flex;
   flex-direction: column;
   margin-left: 3em;
+}
+
+/* Hides the scrollbar */
+.content::-webkit-scrollbar {
+  display: none !important;
+}
+
+main article {
+  scrollbar-width: none;
 }
 
 .content {
@@ -75,7 +85,7 @@ header {
   box-shadow: 0em 1px 1em #2326AF;
 }
 
-header li,
+header li a,
 ul {
   list-style: none;
 }
@@ -84,11 +94,17 @@ header li {
   display: inline-block;
   padding: 0 20px;
   font-size: 28px;
+  /* Was 28px */
+  color: #fafafb;
 }
 
-header li {
-  transition: 0.5s;
+.active {
+  border-bottom: 2px solid black;
 }
+
+/* header li {
+  transition: 0.5s;
+} */
 
 header a {
   margin-right: auto;
@@ -141,10 +157,16 @@ aside a:hover {
   -webkit-text-stroke: 0.2px rgb(237, 244, 224);
 }
 
-header a:hover {
+header a {
   color: #2326AF;
   -webkit-text-stroke: 0.5px black;
 }
+
+header a:hover {
+  color: white;
+  -webkit-text-stroke: 0.5px #2326AF;
+}
+
 
 
 h1 {

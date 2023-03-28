@@ -1,12 +1,15 @@
 {
     "subjects": [
         "loops",
-        "navbar2",
-        "navbar3",
         "about"
     ],
     "loops": [
         "loops",
-        "forEach"
+        "forEach",
+        "while"
+    ],
+    "about": [
+        "about",
+        "the-course"
     ]
 }

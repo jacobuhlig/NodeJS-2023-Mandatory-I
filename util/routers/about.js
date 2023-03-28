@@ -5,14 +5,14 @@ const router = express.Router();
 import templateEngine from "../templateEngine.js";
 
 
-const extension = "loops"
+const extension = "about"
 const partOfPath = "./public/pages/" + extension;
 
 
 // Content titles
 import subjects from "../subjects/subjects.js";
 const topicsNavbar = subjects.getSubjects();
-const subTopicsSidebar = subjects.getLoops();
+const subTopicsSidebar = subjects.getAbout();
 
 
 // Rendered content for components
@@ -22,21 +22,21 @@ const topicsContent = templateEngine.renderListElements(topicsNavbar, "");
 
 // Constructed pages
 
-// General - loops
-const loopsPath = templateEngine.readPage(partOfPath + "/loopsGeneral/loopsGeneral.html");
+// General - about
+const aboutPath = templateEngine.readPage(partOfPath + "/aboutMe/about.html");
 
-const loopsPage = templateEngine.renderPage(loopsPath, {
-    tabTitle: "Mandatory | Loops",
+const aboutPage = templateEngine.renderPage(aboutPath, {
+    tabTitle: "Mandatory | About",
     subTopics: subTopicsContent,
     topics: topicsContent
 });
 
 
-// forEach
-const forEachPath = templateEngine.readPage(partOfPath + "/forEach/forEach.html");
+// theCourse
+const theCoursePath = templateEngine.readPage(partOfPath + "/theCourse/theCourse.html");
 
-const forEachPage = templateEngine.renderPage(forEachPath, {
-    tabTitle: "Loops | ForEach",
+const theCoursePage = templateEngine.renderPage(theCoursePath, {
+    tabTitle: "About | theCourse",
     subTopics: subTopicsContent,
     topics: topicsContent
 });
@@ -45,12 +45,12 @@ const forEachPage = templateEngine.renderPage(forEachPath, {
 
 // Endpoints
 router.get("/", (req, res) => {
-    res.send(loopsPage);
+    res.send(aboutPage);
 });
 
 
-router.get("/forEach/", (req, res) => {
-    res.send(forEachPage);
+router.get("/theCourse/", (req, res) => {
+    res.send(theCoursePage);
 });
 
 

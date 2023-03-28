@@ -9,14 +9,18 @@ import templateEngine from "./util/templateEngine.js";
 
 import subjects from "./util/subjects/subjects.js";
 const topicsNavbar = subjects.getSubjects();
+const subTopicsSidebar = subjects.getLoops();
 
 
 // Routers
 
-import { router as loopsRouter } from "./util/routers/loops.js";
-
 // Loops
+import { router as loopsRouter } from "./util/routers/loops.js";
 app.use("/loops", loopsRouter);
+
+// About
+import { router as aboutRouter } from "./util/routers/about.js";
+app.use("/about", aboutRouter);
 
 
 
@@ -32,30 +36,19 @@ console.log(topicsNavbar);
 // Frontpage
 const frontpagePath = templateEngine.readPage(partOfPath + "frontpage/frontpage.html");
 
-
-
-// About page
-const aboutPath = templateEngine.readPage(partOfPath + "about/about.html");
-const aboutPage = templateEngine.renderPage(aboutPath, {
-  tabTitle: "Mandatory | About"
+const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
+  tabTitle: "Mandatory | Welcome",
+  cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css" />`,
+  topics: templateEngine.renderListElements(topicsNavbar, "")
 });
 
 
 
 // Endpoints
+
+// Frontpage
 app.get("/", (req, res) => {
-  const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
-    tabTitle: "Mandatory | Welcome",
-    cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css" />`,
-    topics: templateEngine.renderListElements(topicsNavbar, "")
-  });
   res.send(frontpagePage)
-});
-
-
-
-app.get("/about", (req, res) => {
-  res.send(aboutPage)
 });
 
 

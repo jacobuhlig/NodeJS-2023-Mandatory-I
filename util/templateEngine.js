@@ -44,7 +44,18 @@ function renderListElements(arrayOfStrings, endpoint) {
 
   for (let i = 0; i < length; i++) {
     const currentEndpoint = arrayOfStrings[i];
-    const visualElement = capitalizeFirstLetter(arrayOfStrings[i]);
+    const visualElement = capitalizeWords(arrayOfStrings[i]);
+
+
+    let containsAboutAndLoops = false;
+
+    /* Below should be revised, since I need the actual path, in order to make something flexible and dynamic. 
+    ${containsAboutAndLoops ? "class=\"active\"" : ""}
+    */
+    /* if (arrayOfStrings.includes("about") && arrayOfStrings.includes("loops")) {
+      containsAboutAndLoops = true;
+    } */
+
 
     let link;
     if (currentEndpoint === endpoint || endpoint === "") {
@@ -68,6 +79,12 @@ function renderListElements(arrayOfStrings, endpoint) {
 }
 
 
+function capitalizeWords(str) {
+  return str
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
 
 function capitalizeFirstLetter(string) {
 

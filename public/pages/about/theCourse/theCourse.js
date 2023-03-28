@@ -1,0 +1,1 @@
+console.log(`Succesfully read theCourse.js`);
