@@ -4,8 +4,8 @@ const app = express();
 app.use(express.static("public"));
 
 import templateEngine from "./util/templateEngine.js";
-import { getSubjects } from "./util/subjects/subjects.js";
-const topicsNavbar = getSubjects();
+import subjects from "./util/subjects/subjects.js";
+const topicsNavbar = subjects.getSubjects();
 // Routers
 
 
@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
   const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
     tabTitle: "Mandatory | Welcome",
     cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css" />`,
-    topics: templateEngine.renderListElements(topicsNavbar, extension.slice(0, -1), req.originalUrl)
+    topics: templateEngine.renderListElements(topicsNavbar, "", req.originalUrl)
   });
   res.send(frontpagePage)
 });

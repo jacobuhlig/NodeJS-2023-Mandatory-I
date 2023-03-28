@@ -60,33 +60,34 @@ function renderListElements(arrayOfStrings, extension) {
   return result;
 }
 
-function renderListElements2(arrayOfStrings, extension, currentPath) {
+function renderListElements2(arrayOfStrings, endpoint) {
 
   let result = "";
   const length = arrayOfStrings.length;
 
-  console.log(`Current path: ${currentPath}`);
-  /* currentPath = currentPath + extension */
-  console.log(`Current path: ${currentPath}`);
+  /* const pathSegments = currentPath.split("/");
+  pathSegments.splice(0, 3); */
 
   for (let i = 0; i < length; i++) {
-    const endpoint = arrayOfStrings[i];
+    const currentEndpoint = arrayOfStrings[i];
     const visualElement = capitalizeFirstLetter(arrayOfStrings[i]);
-    /* const link = `<li><a href="${currentPath}">${visualElement}</a></li>`; */
-    /* result += link; */
-    /* extension === endpoint */
-    console.log(currentPath);
-    const length = currentPath.split("/").length;
-    console.log(length);
-    const array = currentPath.split("/");
-    console.log(array);
-    if (length > 1) {
-      const link = `<li><a href="${currentPath}">${visualElement}</a></li>`;
-      result += link;
+
+    let link;
+    if (currentEndpoint === endpoint) {
+      link = `
+      <li>
+        <a href="/${currentEndpoint}">${visualElement}</a>
+      </li>
+      `;
     } else {
-      const link = `<li><a href="${extension + "/" + endpoint}">${visualElement}</a></li>`;
-      result += link;
+      link = `
+      <li>
+        <a href="/${endpoint}/${currentEndpoint}">${visualElement}</a>
+      </li>
+      `;
     }
+    /* console.log(link); */
+    result += link;
   }
 
   return result;
