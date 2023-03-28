@@ -1,6 +1,7 @@
 import fs from "fs";
 import escape from "escape-html";
 
+
 function renderPage(page, config = {}) {
 
   const navbar = fs.readFileSync("./public/components/00._navbar/navbar.html").toString()
@@ -20,6 +21,7 @@ function renderPage(page, config = {}) {
 }
 
 
+
 function renderFrontpage(page, config = {}) {
 
   const navbar = fs.readFileSync("./public/components/00._navbar/navbar.html").toString()
@@ -34,46 +36,18 @@ function renderFrontpage(page, config = {}) {
 }
 
 
-function renderListElements(arrayOfStrings, extension) {
 
-  let result = "";
-
-  const length = arrayOfStrings.length;
-
-  console.log(1, arrayOfStrings);
-
-  for (let i = 0; i < length; i++) {
-    const endpoint = arrayOfStrings[i];
-    const visualElement = capitalizeFirstLetter(arrayOfStrings[i]);
-    if (i === 0) {
-      const placeholder = extension;
-      extension = "/";
-      const link = `<li><a href="${extension + endpoint}">${visualElement}</a></li>`;
-      result += link;
-      extension = placeholder;
-    } else {
-      const link = `<li><a href="${extension + endpoint}">${visualElement}</a></li>`;
-      result += link;
-    }
-  }
-
-  return result;
-}
-
-function renderListElements2(arrayOfStrings, endpoint) {
+function renderListElements(arrayOfStrings, endpoint) {
 
   let result = "";
   const length = arrayOfStrings.length;
-
-  /* const pathSegments = currentPath.split("/");
-  pathSegments.splice(0, 3); */
 
   for (let i = 0; i < length; i++) {
     const currentEndpoint = arrayOfStrings[i];
     const visualElement = capitalizeFirstLetter(arrayOfStrings[i]);
 
     let link;
-    if (currentEndpoint === endpoint) {
+    if (currentEndpoint === endpoint || endpoint === "") {
       link = `
       <li>
         <a href="/${currentEndpoint}">${visualElement}</a>
@@ -86,17 +60,20 @@ function renderListElements2(arrayOfStrings, endpoint) {
       </li>
       `;
     }
-    /* console.log(link); */
+
     result += link;
   }
 
   return result;
 }
 
+
+
 function capitalizeFirstLetter(string) {
 
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
 
 
 function readPage(pagePath) {
@@ -105,10 +82,10 @@ function readPage(pagePath) {
 }
 
 
+
 export default {
   renderPage,
   renderFrontpage,
   renderListElements,
-  renderListElements2,
   readPage
 };
