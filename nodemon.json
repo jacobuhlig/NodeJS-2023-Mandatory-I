@@ -1,3 +1,6 @@
 {
-  "ext": "js, json, html"
+  "watch": [
+    "public/pages/"
+  ],
+  "ext": "js, json, html, md"
 }

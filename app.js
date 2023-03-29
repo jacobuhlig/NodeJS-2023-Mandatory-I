@@ -34,7 +34,7 @@ console.log(topicsNavbar);
 // Constructed pages
 
 // Frontpage
-const frontpagePath = templateEngine.readPage(partOfPath + "frontpage/frontpage.html");
+const frontpagePath = templateEngine.readPage(partOfPath + "frontpage/frontpage.md");
 
 const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
   tabTitle: "Mandatory | Welcome",

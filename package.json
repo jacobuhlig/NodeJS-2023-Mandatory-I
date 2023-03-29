@@ -4,7 +4,6 @@
   "description": "An application that seeks to introduce you to the wondrous world behind the creation of a full-stack NodeJS web-application.",
   "type": "module",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +23,7 @@
   "homepage": "https://github.com/jacobuhlig/NodeJS-2023-Mandatory-I#readme",
   "dependencies": {
     "escape-html": "^1.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "marked": "^4.3.0"
   }
 }
