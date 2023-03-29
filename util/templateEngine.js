@@ -61,13 +61,13 @@ function renderListElements(arrayOfStrings, endpoint) {
     if (currentEndpoint === endpoint || endpoint === "") {
       link = `
       <li>
-        <a href="/${currentEndpoint}">${visualElement}</a>
+        <a rel="preload" href="/${currentEndpoint}">${visualElement}</a>
       </li>
       `;
     } else {
       link = `
       <li>
-        <a href="/${endpoint}/${currentEndpoint}">${visualElement}</a>
+        <a rel="preload" href="/${endpoint}/${currentEndpoint}">${visualElement}</a>
       </li>
       `;
     }

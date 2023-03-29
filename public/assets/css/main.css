@@ -60,6 +60,11 @@ main article {
   scrollbar-width: none;
 }
 
+header ul li a,
+main aside {
+  contain: strict;
+}
+
 .content {
   overflow: auto;
   padding-top: 3em;
