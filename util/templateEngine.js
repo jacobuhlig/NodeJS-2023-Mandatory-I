@@ -31,7 +31,33 @@ marked.setOptions({
 
 
 
-function renderPage(page, config = {}) {
+function renderPage(page, path, folderAndFileName, config = {}) {
+
+  let partOfPath = path;
+  console.log(partOfPath);
+  
+  // let basePath = partOfPath.split("/")[0];
+  // console.log(basePath);
+
+  // let basePath1 = partOfPath.split("/")[1];
+  // console.log(basePath1);
+  if (partOfPath.includes("-") || partOfPath.split("/").length > 1) {
+    console.log(`here`);
+    let basePath = partOfPath.split("/")[1];
+    partOfPath = "/" + basePath + "/";
+  } else {
+    console.log(`hello`);
+  }
+  
+  console.log(`Before log`);
+  console.log(folderAndFileName);
+  console.log(partOfPath);
+  console.log(`After log`);
+
+  const url = `<script src="/pages${partOfPath}${folderAndFileName}/${folderAndFileName}.js"></script>`
+  console.log(url);
+  // <script src="/pages/loops/loopsGeneral/loopsGeneral.js"></script>
+
 
   const navbar = fs.readFileSync("./public/components/00._navbar/navbar.html").toString()
     .replace("$TAB_TITLE", config.tabTitle || "Mandatory I")
@@ -40,8 +66,9 @@ function renderPage(page, config = {}) {
 
   const sidebar = fs.readFileSync("./public/components/01._sidebar/sidebar.html").toString()
     .replace("$SUB_TOPIC_LIST", config.subTopics || "SubTopic");
-
-  const topFooter = fs.readFileSync("./public/components/02._footer/topFooter.html").toString()
+    
+    const topFooter = fs.readFileSync("./public/components/02._footer/topFooter.html").toString()
+    .replace("$SCRIPT_LINK", url || "");
 
   const footer = fs.readFileSync("./public/components/02._footer/footer.html").toString()
     .replace("$FOOTER_YEAR", `© ${new Date().getFullYear()}`);
@@ -65,10 +92,18 @@ function renderFrontpage(page, config = {}) {
 }
 
 
+// Assigning an array to a new variable (creates a reference)
+const originalArray = [1, 2, 3];
+const newArray = originalArray;
+
+// Now, if we modify newArray, originalArray will also be affected:
+newArray.push(4);
+console.log(originalArray); // Output: [1, 2, 3, 4]
 
 function renderListElements(arrayOfStrings, endpoint) {
 
   let result = "";
+  const currentElement = arrayOfStrings;
   const length = arrayOfStrings.length;
 
   for (let i = 0; i < length; i++) {

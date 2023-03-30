@@ -7,6 +7,8 @@ import templateEngine from "../templateEngine.js";
 
 const extension = "about"
 const partOfPath = "./public/pages/" + extension;
+const cssHighlightPath = `<link rel="stylesheet" href="/assets/css/syntax-highlighting.css" />`;
+const markdownPath = `<link rel="stylesheet" href="/assets/css/markdown.css" />`;
 
 
 // Content titles
@@ -22,34 +24,43 @@ const topicsContent = templateEngine.renderListElements(topicsNavbar, "");
 
 // Constructed pages
 
-// General - about
-const aboutPath = templateEngine.readPage(partOfPath + "/aboutMe/about.html");
+function endOfPath(nameOfPage) {
+    return `/${nameOfPage}/${nameOfPage}.md`;
+}
 
-const aboutPage = templateEngine.renderPage(aboutPath, {
-    tabTitle: "Mandatory | About",
-    subTopics: subTopicsContent,
-    topics: topicsContent
-});
+
+// General - about
+const nameOfPage_about = "about";
+const pathToAbout = partOfPath + endOfPath(nameOfPage_about);
+const aboutPath = templateEngine.readMarkdown(pathToAbout);
 
 
 // theCourse
-const theCoursePath = templateEngine.readPage(partOfPath + "/theCourse/theCourse.html");
-
-const theCoursePage = templateEngine.renderPage(theCoursePath, {
-    tabTitle: "About | theCourse",
-    subTopics: subTopicsContent,
-    topics: topicsContent
-});
+const nameOfPage_theCourse = "theCourse";
+const pathToTheCourse = `${partOfPath}${endOfPath(nameOfPage_theCourse)}`;
+const theCoursePath = templateEngine.readMarkdown(pathToTheCourse);
 
 
 
 // Endpoints
 router.get("/", (req, res) => {
+    const aboutPage = templateEngine.renderPage(aboutPath, (req.baseUrl + req.path), nameOfPage_about, {
+        tabTitle: "Mandatory | About",
+        cssLink: cssHighlightPath + markdownPath,
+        subTopics: subTopicsContent,
+        topics: topicsContent
+    });
     res.send(aboutPage);
 });
 
 
-router.get("/theCourse/", (req, res) => {
+router.get("/the-course/", (req, res) => {
+    const theCoursePage = templateEngine.renderPage(theCoursePath, (req.baseUrl + req.path), nameOfPage_theCourse, {
+        tabTitle: "About | theCourse",
+        cssLink: cssHighlightPath + markdownPath,
+        subTopics: subTopicsContent,
+        topics: topicsContent
+    });
     res.send(theCoursePage);
 });
 

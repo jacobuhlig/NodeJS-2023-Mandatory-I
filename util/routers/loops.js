@@ -3,6 +3,7 @@ const router = express.Router();
 
 
 import templateEngine from "../templateEngine.js";
+import path from "path";
 
 
 const extension = "loops"
@@ -25,35 +26,37 @@ const topicsContent = templateEngine.renderListElements(topicsNavbar, "");
 // Constructed pages
 
 // General - loops
-const loopsPath = templateEngine.readMarkdown(partOfPath + "/loopsGeneral/loopsGeneral.md");
-
-const loopsPage = templateEngine.renderPage(loopsPath, {
-    tabTitle: "Mandatory | Loops",
-    cssLink: cssHighlightPath + markdownPath,
-    subTopics: subTopicsContent,
-    topics: topicsContent
-});
+const nameOfPage_loops = "loops";
+const pathToLoopsGeneral = partOfPath + `/${nameOfPage_loops}/${nameOfPage_loops}.md`;
+const loopsPath = templateEngine.readMarkdown(pathToLoopsGeneral);
 
 
 // forEach
-const forEachPath = templateEngine.readMarkdown(partOfPath + "/forEach/forEach.md");
-
-const forEachPage = templateEngine.renderPage(forEachPath, {
-    tabTitle: "Loops | ForEach",
-    cssLink: cssHighlightPath + markdownPath,
-    subTopics: subTopicsContent,
-    topics: topicsContent
-});
+const nameOfPage_forEach = "forEach";
+const pathToForEach = partOfPath + `/${nameOfPage_forEach}/${nameOfPage_forEach}.md`;
+const forEachPath = templateEngine.readMarkdown(pathToForEach);
 
 
 
 // Endpoints
 router.get("/", (req, res) => {
+    const loopsPage = templateEngine.renderPage(loopsPath, (req.baseUrl + req.path), nameOfPage_loops, {
+        tabTitle: "Mandatory | Loops",
+        cssLink: cssHighlightPath + markdownPath,
+        subTopics: subTopicsContent,
+        topics: topicsContent 
+    });
     res.send(loopsPage);
 });
 
 
 router.get("/forEach/", (req, res) => {
+    const forEachPage = templateEngine.renderPage(forEachPath, (req.baseUrl + req.path), nameOfPage_forEach, {
+        tabTitle: "Loops | ForEach",
+        cssLink: cssHighlightPath + markdownPath,
+        subTopics: subTopicsContent,
+        topics: topicsContent
+    });
     res.send(forEachPage);
 });
 

@@ -27,5 +27,3 @@ $ git push
 ```
 
 Accumsan in nisl nisi scelerisque eu ultrices vitae. Pharetra massa massa ultricies mi quis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Et tortor consequat id porta. Morbi quis commodo odio aenean sed adipiscing.
-
-<script src="/pages/loops/loopsGeneral/loopsGeneral.js"></script>
