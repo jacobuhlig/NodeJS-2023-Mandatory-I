@@ -1,9 +1,9 @@
 h1 {
     width: 100%;
+    color: rgb(38, 89, 161);
     text-align: center;
-    padding-top: 3em;
-    font-size: 60px;
-
+    font-size: 5rem;
+    padding-top: 30vh;
 }
 
 main {

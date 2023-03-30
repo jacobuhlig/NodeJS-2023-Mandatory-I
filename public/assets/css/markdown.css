@@ -1,0 +1,71 @@
+
+h1, h2 {
+  font-family: modernSansFontRegular;
+  color: rgb(59, 112, 185);
+  margin-bottom: 1em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: rgb(38, 89, 161);
+  margin-bottom: 1em;
+}
+
+
+@media all and (min-width: 1721px) and (max-width: 1920px) {
+  .content {
+    margin: 0 12em;
+  }
+}
+
+@media all and (min-width: 1521px) and (max-width: 1720px) {
+  .content {
+    margin: 0 8em;
+  }
+}
+
+@media all and (min-width: 1281px) and (max-width: 1520px) {
+  .content {
+    margin: 0 5em;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .content {
+      margin: 0 2em;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .content {
+      margin: 0 1em;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .content {
+      margin: 0;
+    }
+}
+
+@media all and (max-width: 480px) {
+  .content {
+      margin: 0 0.2em;
+    }
+}
+
+
+pre {
+  margin: 2em 0;
+  padding: 0.8em 0.5em;
+  box-shadow: 5px 10px 8px #2f31b16e;
+  border-radius: 10px;
+}
+
+.content p {
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+

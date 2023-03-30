@@ -1,1 +1,1 @@
-console.log("Hello from loops.js");
+console.log("Hello from loopsGeneral.js");

@@ -28,13 +28,11 @@ app.use("/about", aboutRouter);
 const extension = "/";
 const partOfPath = "./public/pages" + extension;
 
-console.log(topicsNavbar);
-
 
 // Constructed pages
 
 // Frontpage
-const frontpagePath = templateEngine.readPage(partOfPath + "frontpage/frontpage.md");
+const frontpagePath = templateEngine.readMarkdown(partOfPath + "frontpage/frontpage.md");
 
 const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
   tabTitle: "Mandatory | Welcome",

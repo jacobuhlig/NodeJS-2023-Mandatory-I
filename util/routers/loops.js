@@ -7,6 +7,8 @@ import templateEngine from "../templateEngine.js";
 
 const extension = "loops"
 const partOfPath = "./public/pages/" + extension;
+const cssHighlightPath = `<link rel="stylesheet" href="/assets/css/syntax-highlighting.css" />`;
+const markdownPath = `<link rel="stylesheet" href="/assets/css/markdown.css" />`;
 
 
 // Content titles
@@ -23,20 +25,22 @@ const topicsContent = templateEngine.renderListElements(topicsNavbar, "");
 // Constructed pages
 
 // General - loops
-const loopsPath = templateEngine.readPage(partOfPath + "/loopsGeneral/loopsGeneral.html");
+const loopsPath = templateEngine.readMarkdown(partOfPath + "/loopsGeneral/loopsGeneral.md");
 
 const loopsPage = templateEngine.renderPage(loopsPath, {
     tabTitle: "Mandatory | Loops",
+    cssLink: cssHighlightPath + markdownPath,
     subTopics: subTopicsContent,
     topics: topicsContent
 });
 
 
 // forEach
-const forEachPath = templateEngine.readPage(partOfPath + "/forEach/forEach.html");
+const forEachPath = templateEngine.readMarkdown(partOfPath + "/forEach/forEach.md");
 
 const forEachPage = templateEngine.renderPage(forEachPath, {
     tabTitle: "Loops | ForEach",
+    cssLink: cssHighlightPath + markdownPath,
     subTopics: subTopicsContent,
     topics: topicsContent
 });
