@@ -23,6 +23,7 @@ const subTopicsContent = templateEngine.renderListElements(subTopicsSidebar, ext
 const topicsContent = templateEngine.renderListElements(topicsNavbar, "");
 
 function endOfPath(nameOfPage) {
+    console.log(`nameOfPage: ${nameOfPage}`);
     return `securityAndPerformance/${nameOfPage}/${nameOfPage}.md`;
 }
 
@@ -58,14 +59,14 @@ const sanitizationPath = templateEngine.readMarkdown(pathToSanitization);
 
 //security-and-performance
 router.get("/", (req, res) => {
-    const securityPath = templateEngine.renderPage(securityPath
+    const securityPage = templateEngine.renderPage(securityPath
 , (req.baseUrl + req.path), nameOfPage_security, {
         tabTitle: "Mandatory | Security & Performance",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
     });
-    res.send(securityPath);
+    res.send(securityPage);
 });
 
 // xss-prevention
