@@ -34,7 +34,7 @@ marked.setOptions({
 function renderPage(page, path, folderAndFileName, config = {}) {
 
   let partOfPath = path;
-  console.log(partOfPath);
+  console.log(111111 + partOfPath);
   
   // let basePath = partOfPath.split("/")[0];
   // console.log(basePath);
@@ -92,19 +92,10 @@ function renderFrontpage(page, config = {}) {
 }
 
 
-// Assigning an array to a new variable (creates a reference)
-const originalArray = [1, 2, 3];
-const newArray = originalArray;
-
-// Now, if we modify newArray, originalArray will also be affected:
-newArray.push(4);
-console.log(originalArray); // Output: [1, 2, 3, 4]
-
 function renderListElements(arrayOfStrings, endpoint) {
 
   let result = "";
-  const currentElement = arrayOfStrings;
-  const length = arrayOfStrings.length;
+  const length =  arrayOfStrings.length;
 
   for (let i = 0; i < length; i++) {
     const currentEndpoint = arrayOfStrings[i];

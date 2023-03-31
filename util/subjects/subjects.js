@@ -7,16 +7,26 @@ export function getSubjects() {
     return subjectsData.subjects;
 }
 
-export function getLoops() {
-    return subjectsData.loops;
+export function getJSBasics() {
+    return subjectsData['js-basics'];
 }
 
-export function getAbout() {
-    return subjectsData.about;
+export function getWebArchitecture() {
+    return subjectsData['web-architecture']
+}
+
+export function getNodeAndPackages() {
+    return subjectsData['node-and-packages'];
+}
+
+export function getSecurityAndPerformance() {
+    return subjectsData['security-and-performance'];
 }
 
 export default {
     getSubjects,
-    getLoops,
-    getAbout
+    getJSBasics,
+    getWebArchitecture,
+    getNodeAndPackages,
+    getSecurityAndPerformance
 };

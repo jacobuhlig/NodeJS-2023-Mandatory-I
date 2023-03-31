@@ -9,18 +9,34 @@ import templateEngine from "./util/templateEngine.js";
 
 import subjects from "./util/subjects/subjects.js";
 const topicsNavbar = subjects.getSubjects();
-const subTopicsSidebar = subjects.getLoops();
+
+
+// Rendered content for components
+const topicsContent = templateEngine.renderListElements(topicsNavbar, "");
 
 
 // Routers
+// JS Basics
+import { router as jsBasicsRouter } from "./util/routers/jsBasics.js";
+app.use("/js-basics", jsBasicsRouter);
 
-// Loops
-import { router as loopsRouter } from "./util/routers/loops.js";
-app.use("/loops", loopsRouter);
+// Web Architecture
+import { router as webArchitectureRouter } from "./util/routers/webArchitecture.js";
+app.use("/web-architecture", webArchitectureRouter);
+
+// Node and Packages
+import { router as nodeAndPackagesRouter } from "./util/routers/nodeAndPackages.js";
+app.use("/node-and-packages", nodeAndPackagesRouter);
+
+// Security and Performance
+import { router as securityAndPerformanceRouter } from "./util/routers/securityAndPerformance.js";
+app.use("/security-and-performance", securityAndPerformanceRouter);
+
+
 
 // About
-import { router as aboutRouter } from "./util/routers/about.js";
-app.use("/about", aboutRouter);
+// import { router as aboutRouter } from "./util/routers/about.js";
+// app.use("/webArchitecture", aboutRouter);
 
 
 
@@ -37,7 +53,7 @@ const frontpagePath = templateEngine.readMarkdown(partOfPath + "frontpage/frontp
 const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
   tabTitle: "Mandatory | Welcome",
   cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css" />`,
-  topics: templateEngine.renderListElements(topicsNavbar, "")
+  topics: topicsContent
 });
 
 

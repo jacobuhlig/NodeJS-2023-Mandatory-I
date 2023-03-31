@@ -42,8 +42,9 @@ main {
 }
 
 main aside {
-  flex: 0 0 200px;
+  flex: 0 0 300px;
 }
+
 
 main article {
   display: flex;
@@ -81,6 +82,11 @@ body {
 body header {
   border-bottom: 2px solid rgb(38, 89, 161);
 }
+
+body header nav ul li a {
+  word-spacing: -0.2em;
+}
+
 
 header {
   display: flex;
@@ -142,9 +148,9 @@ aside ul li:first-child {
 
 aside ul li a {
   color: white;
-  /* padding-left: 3em; */
+  padding-left: 1.3em;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   /* align-items: center; */
 }
 

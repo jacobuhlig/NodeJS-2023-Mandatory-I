@@ -1,0 +1,1 @@
+console.log(`jsBasics.js is loaded`);

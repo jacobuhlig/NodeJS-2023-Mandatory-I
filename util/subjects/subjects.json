@@ -1,15 +1,38 @@
 {
     "subjects": [
-        "loops",
-        "about"
+        "js-basics",
+        "web-architecture",
+        "node-and-packages",
+        "security-and-performance"
     ],
-    "loops": [
-        "loops",
-        "forEach",
-        "while"
+    "js-basics": [
+        "js-basics",
+        "data-types-and-scoping",
+        "functions-and-callbacks",
+        "loop-methods",
+        "date-and-time"
     ],
-    "about": [
-        "about",
-        "the-course"
+    "web-architecture": [
+        "web-architecture",
+        "rest-api-and-crud",
+        "ssr-vs.-csr",
+        "frontend-structure",
+        "redirection",
+        "node-and-packages"
+    ],
+    "node-and-packages": [
+        "node-and-packages",
+        "node.js-and-express",
+        "import-export",
+        "package.json-and-node_modules",
+        "static-files-in-express",
+        "security-and-performance"
+    ],
+    "security-and-performance": [
+        "security-and-performance",
+        "xss-prevention",
+        "memory-optimization",
+        "ssr-vs.-csr-factors",
+        "sanitization-and-npm"
     ]
 }
