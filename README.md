@@ -1,6 +1,6 @@
 <p align="center">
   <img src="public/assets/images/learning-logo.png" width="80" alt="Logo" align="left">
-  <br><br><br>
+  <br><br>
   <h1>NodeJS-2023-Mandatory-I</h1>
 </p>
 
