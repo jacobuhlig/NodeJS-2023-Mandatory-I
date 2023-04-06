@@ -18,10 +18,10 @@ The `site` is easily navigated, but for the few, needing some assistance in this
 
 In the navbar (the horizontal component in the top-part of your screen), the following subjects, can be explored.
 
-1. [js-basics](/js-basics)
-2. [web-architecture](/web-architecture)
-3. [node-and-packages](/node-and-packages)
-4. [security-and-performance](/security-and-performance)
+1. [js-basics](/public/pages/jsBasics/)
+2. [web-architecture](/public/pages/webArchitecture/)
+3. [node-and-packages](/public/pages/nodeAndPackages/)
+4. [security-and-performance](/public/pages/securityAndPerformance/)
 
 Now I will not delve into each of these here, but rather, I will explain the general structure of the site.
 
