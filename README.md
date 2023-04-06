@@ -1,9 +1,10 @@
-<table>
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
   <tr>
-    <td><img src="public/assets/images/learning-logo.png" width="80" /></td>
-    <td><h1>NodeJS-2023-Mandatory-I</h1></td>
+    <td style="text-align: left;"><img src="public/assets/images/learning-logo.png" width="80" /></td>
+    <td style="text-align: center;"><h1>NodeJS-2023-Mandatory-I</h1></td>
   </tr>
 </table>
+
 
 ## Welcome to my Mandatory I project.
 
