@@ -1,6 +1,6 @@
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
   <tbody width="100">
-    <tr>
+    <tr width="100">
       <td valign="top">
         <img src="public/assets/images/learning-logo.png" width="80" />
       </td>
