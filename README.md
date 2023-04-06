@@ -14,14 +14,14 @@ The purpose of this project is to document parts of the curriculum, deemed relev
 ### How?
 This includes, as explained in the prompt, code blocks and snippets, which all should seek to enhance the ways in which learning is able to take place.
 
-The site is easily navigated, but for the few, needing some assistance in this regard, you shall henceforth be giveth an explanation:
+The `site` is easily navigated, but for the few, needing some assistance in this regard, you shall henceforth be giveth an explanation:
 
 In the navbar (the horizontal component in the top-part of your screen), the following subjects, can be explored.
 
-1. js-basics
-2. web-architecture
-3. node-and-packages
-4. security-and-performance
+1. [js-basics](/js-basics)
+2. [web-architecture](/web-architecture)
+3. [node-and-packages](/node-and-packages)
+4. [security-and-performance](/security-and-performance)
 
 Now I will not delve into each of these here, but rather, I will explain the general structure of the site.
 
