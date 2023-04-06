@@ -1,6 +1,4 @@
-<img src="public/assets/images/learning-logo.png" width="80"/>
-
-# NodeJS-2023-Mandatory-I
+# <img src="public/assets/images/learning-logo.png" width="80"/> NodeJS-2023-Mandatory-I
 
 ## Welcome to my Mandatory I project.
 
