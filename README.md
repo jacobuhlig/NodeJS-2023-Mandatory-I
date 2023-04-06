@@ -1,4 +1,4 @@
-<div display="flex" flex-direction="column">
+<div display="flex" flex-direction="column" align-items: flex-start>
   <img src="public/assets/images/learning-logo.png" width="80"/>
   <h1 align="center">NodeJS-2023-Mandatory-I</h1>
 </div>
