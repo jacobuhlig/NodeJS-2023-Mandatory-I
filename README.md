@@ -10,6 +10,7 @@
 
 ### Why?
 The purpose of this project is to document parts of the curriculum, deemed relevant in the preparation for the upcoming exams.
+<br>
 
 ### How?
 This includes, as explained in the prompt, `code blocks` and `snippets`, which all should seek to enhance the ways in which learning is able to take place.
@@ -23,9 +24,12 @@ In the navbar (the horizontal component in the top-part of your screen), the fol
 3. [node-and-packages](/public/pages/nodeAndPackages/)
 4. [security-and-performance](/public/pages/securityAndPerformance/)
 
+<br>
+
 Now I will not delve into each of these here, but rather, I will explain the general structure of the site.
 
 If an element is selected, a sidebar will appear, containing the sub-elements of the selected element. If you select a sub-element, the content of the sub-element will be displayed in the main content area.
+<br>
 
 ### Additional information
 If one should stumble upon an article, which at the surface level, should seem incomplete, this is all part of the design.
