@@ -1,4 +1,4 @@
-<table>
+<table width="100%">
   <tr>
     <td valign="top"><img src="public/assets/images/learning-logo.png" width="80" /></td>
     <td valign="top"><h1>NodeJS-2023-Mandatory-I</h1></td>
