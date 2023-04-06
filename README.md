@@ -1,4 +1,7 @@
-<h1 align="center">NodeJS-2023-Mandatory-I<img src="public/assets/images/learning-logo.png" width="80"/></h1>
+<div display="flex">
+  <img src="public/assets/images/learning-logo.png" width="80"/>
+  <h1 align="center">NodeJS-2023-Mandatory-I</h1>
+</div>
 
 ## Welcome to my Mandatory I project.
 
