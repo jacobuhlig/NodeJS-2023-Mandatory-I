@@ -35,3 +35,7 @@ If an element is selected, a sidebar will appear, containing the sub-elements of
 ### Additional information
 If one should stumble upon an article, which at the surface level, should seem incomplete, this is all part of the design.
 The article isn't actually incomplete, but the option of scrolling down, has for design purposes, been hidden, which doesn't make it obvious that there is more content to be found.
+<br><br>
+
+### License
+[MIT](https://github.com/jacobuhlig/NodeJS-2023-Mandatory-I/blob/main/LICENSE)
