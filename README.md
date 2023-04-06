@@ -1,11 +1,10 @@
-<p align="center" padding-top="15px">
+<br>
+<p valign="center">
   <img src="public/assets/images/learning-logo.png" width="80" alt="Logo" align="left">
   <br>
   <h1>NodeJS-2023-Mandatory-I</h1>
 </p>
-
 <br>
-
 
 ## Welcome to my Mandatory I project.
 
