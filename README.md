@@ -1,15 +1,17 @@
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
-  <tr>
-    <td valign="top">
-      <img src="public/assets/images/learning-logo.png" width="80" />
-    </td>
-    <td valign="middle" align="center">
-      <h1>NodeJS-2023-Mandatory-I</h1>
-    </td>
-    <td width="100%" valign="top">
-      &#x200B;
-    </td>
-  </tr>
+  <tbody width="100">
+    <tr>
+      <td valign="top">
+        <img src="public/assets/images/learning-logo.png" width="80" />
+      </td>
+      <td valign="middle" align="center">
+        <h1>NodeJS-2023-Mandatory-I</h1>
+      </td>
+      <td width="100%" valign="top">
+        &#x200B;
+      </td>
+    </tr>
+  </tbody>
 </table>
 <br>
 
