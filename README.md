@@ -2,7 +2,7 @@
 <p valign="center">
   <img valign="left" src="public/assets/images/learning-logo.png" width="80" alt="Logo" align="left">
   <br>
-  <h1 valign="center"><span>&#8195;</span><span>&#8195;</span><span>&#8195;</span>NodeJS - Mandatory I - 2023</h1>
+  <h1 valign="center"><span>&#8195;</span><span>&#8195;</span><span>&#8195;</span>NodeJS-2023-Mandatory-I</h1>
 </p>
 <br>
 
