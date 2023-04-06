@@ -1,11 +1,18 @@
-<table width="100%">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
   <tr>
-    <td valign="top"><img src="public/assets/images/learning-logo.png" width="80" /></td>
-    <td valign="top"><h1>NodeJS-2023-Mandatory-I</h1></td>
-    <td valign="top"></td>
+    <td valign="top" rowspan="2">
+      <img src="public/assets/images/learning-logo.png" width="80" />
+    </td>
+    <td valign="top" width="50%"></td>
+    <td valign="top" width="50%"></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2" align="center">
+      <h1>NodeJS-2023-Mandatory-I</h1>
+    </td>
   </tr>
 </table>
-<br>
+
 
 ## Welcome to my Mandatory I project.
 
