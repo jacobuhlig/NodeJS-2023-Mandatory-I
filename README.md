@@ -1,5 +1,5 @@
 # NodeJS-2023-Mandatory-I
-<img src="public/assets/images/learning-logo.png" width="20"/>
+<img src="public/assets/images/learning-logo.png" width="48"/>
 
 ## Welcome to my Mandatory I project.
 
