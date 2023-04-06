@@ -20,10 +20,10 @@ The site is easily navigated, but for the few, needing some assistance in this r
 <br>
 In the navbar (the horizontal component in the top-part of your screen), the following subjects, can be explored.
 
-1. [js-basics](/public/pages/jsBasics/)
-2. [web-architecture](/public/pages/webArchitecture/)
-3. [node-and-packages](/public/pages/nodeAndPackages/)
-4. [security-and-performance](/public/pages/securityAndPerformance/)
+  1. [js-basics](/public/pages/jsBasics/)
+  2. [web-architecture](/public/pages/webArchitecture/)
+  3. [node-and-packages](/public/pages/nodeAndPackages/)
+  4. [security-and-performance](/public/pages/securityAndPerformance/)
 
 <br>
 
