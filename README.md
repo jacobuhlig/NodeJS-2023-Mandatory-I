@@ -1,6 +1,10 @@
 <div class="flex-container">
-  <img src="public/assets/images/learning-logo.png" width="80"/>
-  <h1>NodeJS-2023-Mandatory-I</h1>
+  <div>
+    <img src="public/assets/images/learning-logo.png" width="80"/>
+  </div>
+  <div>
+    <h1>NodeJS-2023-Mandatory-I</h1>
+  </div>
 </div>
 
 ## Welcome to my Mandatory I project.
