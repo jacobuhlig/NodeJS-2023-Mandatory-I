@@ -1,4 +1,4 @@
-<table cellspacing="0" cellpadding="0" cell-border="0" width: 100%>
+<table cellspacing="0" cellpadding="0" cell-border="0" width: 100vw>
   <tr display=flex>
     <td align="left" width: 20%><img src="public/assets/images/learning-logo.png" width="80" /></td>
     <td align="center" width: 60%><h1>NodeJS-2023-Mandatory-I</h1></td>
