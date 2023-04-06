@@ -12,9 +12,9 @@
 The purpose of this project is to document parts of the curriculum, deemed relevant in the preparation for the upcoming exams.
 
 ### How?
-This includes, as explained in the prompt, code blocks and snippets, which all should seek to enhance the ways in which learning is able to take place.
+This includes, as explained in the prompt, `code blocks` and `snippets`, which all should seek to enhance the ways in which learning is able to take place.
 
-The `site` is easily navigated, but for the few, needing some assistance in this regard, you shall henceforth be giveth an explanation:
+The site is easily navigated, but for the few, needing some assistance in this regard, you shall henceforth be giveth an explanation:
 
 In the navbar (the horizontal component in the top-part of your screen), the following subjects, can be explored.
 
