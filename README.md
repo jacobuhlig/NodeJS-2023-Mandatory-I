@@ -1,9 +1,8 @@
 <table cellspacing="0" cellpadding="0" cell-border="0" width: 100%>
   <tr display=flex>
-    <td align="left"><img src="public/assets/images/learning-logo.png" width="80" /></td>
-    <td align="center"><h1>NodeJS-2023-Mandatory-I</h1></td>
-    <td align="center"></td>
-    <td></td>
+    <td align="left" width: 20%><img src="public/assets/images/learning-logo.png" width="80" /></td>
+    <td align="center" width: 60%><h1>NodeJS-2023-Mandatory-I</h1></td>
+    <td align="center" width: 20%></td>
   </tr>
 </table>
 <br>
