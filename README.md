@@ -1,4 +1,4 @@
-<div class="flex-container">
+<div display="flex">
   <div>
     <img src="public/assets/images/learning-logo.png" width="80"/>
   </div>
