@@ -1,8 +1,8 @@
 <div display="flex" flex-direction="center">
-  <div>
+  <div flex-item="left">
     <img src="public/assets/images/learning-logo.png" width="80"/>
   </div>
-  <div>
+  <div flex-item="center">
     <h1>NodeJS-2023-Mandatory-I</h1>
   </div>
 </div>
