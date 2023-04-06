@@ -1,5 +1,5 @@
 # NodeJS-2023-Mandatory-I
-![image-alt](https://github.com/jacobuhlig/NodeJS-2023-Mandatory-I/blob/main/public/assets/images/learning-logo.png)
+![image-alt](https://github.com/jacobuhlig/NodeJS-2023-Mandatory-I/blob/main/public/assets/images/learning-logo.png | width=100)
 
 ## Welcome to my Mandatory I project.
 
