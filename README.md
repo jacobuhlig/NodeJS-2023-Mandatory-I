@@ -1,4 +1,4 @@
-<div display="flex">
+<div display="flex" flex-direction="center">
   <div>
     <img src="public/assets/images/learning-logo.png" width="80"/>
   </div>
