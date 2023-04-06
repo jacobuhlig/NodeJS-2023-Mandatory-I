@@ -2,6 +2,7 @@
   <tr>
     <td style="text-align: left;"><img src="public/assets/images/learning-logo.png" width="80" /></td>
     <td style="text-align: center;"><h1>NodeJS-2023-Mandatory-I</h1></td>
+    <td></td>
   </tr>
 </table>
 
@@ -9,7 +10,7 @@
 ## Welcome to my Mandatory I project.
 
 ### Why?
-The purpose of this project is to document parts of the curriculum, deemed relevant in the preparation of the upcoming exams.
+The purpose of this project is to document parts of the curriculum, deemed relevant in the preparation for the upcoming exams.
 
 ### How?
 This includes, as explained in the prompt, code blocks and snippets, which all should seek to enhance the ways in which learning is able to take place.
