@@ -38,4 +38,4 @@ The article isn't actually incomplete, but the option of scrolling down, has for
 <br><br>
 
 ### License
-[MIT](https://github.com/jacobuhlig/NodeJS-2023-Mandatory-I/blob/main/LICENSE)
+  * [MIT](https://github.com/jacobuhlig/NodeJS-2023-Mandatory-I/blob/main/LICENSE)
