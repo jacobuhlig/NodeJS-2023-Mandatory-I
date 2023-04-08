@@ -1,5 +1,5 @@
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: modernSansFontRegular;
   color: rgb(59, 112, 185);
   margin-bottom: 1em;
@@ -15,15 +15,20 @@ h1 {
 h2 {
     font-size: 1.2em;
     margin-bottom: 0.7em;
-    margin-top: 1.7em;
+    margin-top: 3em;
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.1em;
   margin-bottom: 0.1em;
-  margin-top: 1.7em;
+  margin-top: 3em;
 }
 
+h4 {
+  font-size: 0.9em;
+  margin-bottom: 0.1em;
+  margin-top: 1.5em;
+}
 
 @media all and (min-width: 1721px) and (max-width: 1920px) {
   .content {
@@ -79,5 +84,26 @@ pre {
   color: black;
   font-size: 1.1em;
   line-height: 1.3em;
+  padding: 0.8em 0 0 0;
 }
 
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td, table th {
+  padding: 0.5em;
+}
+
+table th {
+  vertical-align: bottom;
+}
+
+table td {
+  vertical-align: top;
+}
+
+ol {
+  list-style: square;
+}

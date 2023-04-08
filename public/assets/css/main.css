@@ -96,8 +96,7 @@ header {
   box-shadow: 0em 1px 1em #2326AF;
 }
 
-header li a,
-ul {
+header li a {
   list-style: none;
 }
 

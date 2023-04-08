@@ -1,29 +1,118 @@
 # Data Types and Scoping
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse interdum consectetur libero id. Est placerat in egestas erat. Tempus egestas sed sed risus pretium.
-<br/><br/>
+In the attempt at sorting the topics covered throughout the semester, into manageable categories, we've come to realize that `Data Types` and `Scoping`, are essential in understanding the fundamentals of JavaScript. 
 
-## CSS
-```css
-code {
-  background-color: #eee;
-  border: 1px solid #999;
-  display: block;
-  padding: 20px;
-}
+We therefore deemed it appropriate to start out with this.
+
+## Data Types
+
+In total there are 8 data types in JavaScript.
+
+### Primitive Data Types
+The following 5, are the primitive data types:
+
+<table>
+  <tr>
+    <th><h4>Example: Strings</h4></th>
+    <th><h4>Example: Numbers</h4></th>
+    <th><h4>Example: Booleans</h4></th>
+  </tr>
+  <tr>
+    <td>
+
+```javascript
+const message = "Hello, world!";
 ```
-
-## JavaScript
-```js
-import { marked } from "marked";
-import hljs from "highlight.js";
+  </td>
+    <td>
+      
+```javascript
+const number = 42;
 ```
-
-## Bash
-```bash
-$ git add .
-$ git commit -m "message to commit"
-$ git push
+  </td>
+    <td>
+      
+```javascript
+const isTrue = true;
 ```
+  </td>
+  </tr>
+</table>
 
-Accumsan in nisl nisi scelerisque eu ultrices vitae. Pharetra massa massa ultricies mi quis. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Et tortor consequat id porta. Morbi quis commodo odio aenean sed adipiscing.
+
+<table>
+  <tr>
+    <th><h4>Example: Null</h4></th>
+    <th><h4>Example: Undefined</h4></th>
+  </tr>
+  <tr>
+    <td>
+      
+```javascript
+const isNull = null;
+```
+  </td>
+    <td>
+      
+```javascript
+const isUndefined = undefined;
+```
+  </td>
+  </tr>
+</table>
+
+
+
+### Non-Primitive/Complex Data Types
+
+The following 3, are the non-primitive/complex data types:
+
+
+<table>
+  <tr>
+    <th><h4>Example: Objects</h4></th>
+    <th><h4>Example: Arrays</h4></th>
+    <th><h4>Example: Functions</h4></th>
+  </tr>
+  <tr>
+    <td>
+
+```javascript
+      const person = {
+        name: "John",
+        age: 42
+      };
+```
+  </td>
+    <td>
+      
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+```
+  </td>
+    <td>
+      
+```javascript
+const sayHello = function() {
+    console.log("Hello, world!");
+};
+```
+  </td>
+  </tr>
+</table>
+
+
+## Scoping
+
+Even before creating variables though, we need to understand the concept of `Scoping`.
+Scoping defines the degree to which a variable is accessible within a program.
+
+In JavaScript, there are two types of scopes (actually three):
+
+1. Local Scope
+2. Global Scope
+3. (Block Scope)
+
+f
+
+
