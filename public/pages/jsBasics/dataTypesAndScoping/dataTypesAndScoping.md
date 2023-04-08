@@ -149,6 +149,9 @@ Yes, you guessed it, a block is a piece of code that is enclosed within two curl
 
 We've actually been using block scope all along, without even realizing it, as both `let` (mutable) and `const` (immutable) are block scoped.
 
+As an important side note, one should always prioritize the use of const, as opposed to let.
+One of the reasons being that errors are more likely to be caught, using immutable variables.
+
 
 Lastly, and without further detailing, `var` is not block scoped.
 
