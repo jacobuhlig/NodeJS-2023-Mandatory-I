@@ -104,6 +104,21 @@ table td {
   vertical-align: top;
 }
 
-ol {
-  list-style: square;
+article li::marker {
+  color: rgb(59, 112, 185);
+}
+
+article ul {
+  list-style: inside;
+}
+
+article ol, article ul {
+  margin-top: 1.5em;
+  padding-left: 2em;
+}
+
+article li {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
 }

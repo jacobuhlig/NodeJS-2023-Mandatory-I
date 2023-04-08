@@ -113,6 +113,44 @@ In JavaScript, there are two types of scopes (actually three):
 2. Global Scope
 3. (Block Scope)
 
-f
+### Local Scope
+
+Local scope, otherwise known as function scope, means that the availability of a variable defined within said parameter, is limited to that parameter.
+This is the reason that the variable `message` is not accessible outside of the function `sayHello()` (example below).
+
+```javascript
+function sayHello() {
+  const message = "Hello, world!";
+}
+console.log(message); // ReferenceError: message is not defined
+```
+
+
+### Global Scope
+
+Global scope is then when a variable is defined outside of a function, and is therefore accessible throughout the entire program, hence the name `global`.
+Let's take the example from above, and move the variable `message` outside of the function `sayHello()`.
+Just like so:
+
+```javascript
+const message = "Hello, world!";
+```
+
+This variable would now be completely accessible throughout the entire program, including all functions.
+
+
+
+### Block Scope
+
+Now block scope, is a relatively new addition, as it is only available in ES6 and above.
+
+First of all, what is a block?
+Yes, you guessed it, a block is a piece of code that is enclosed within two curly braces `{}`.
+
+We've actually been using block scope all along, without even realizing it, as both `let` (mutable) and `const` (immutable) are block scoped.
+
+
+Lastly, and without further detailing, `var` is not block scoped.
+
 
 
