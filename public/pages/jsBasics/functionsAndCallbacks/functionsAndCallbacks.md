@@ -2,7 +2,17 @@
 
 ## What is a callback function?
 
-A callback function is a function that is passed as an argument to another function and is executed after the completion of the other function. This can be helpful when dealing with asynchronous tasks or when you want to control the order of execution of certain functions.
+The fact that JavaScript is an synchronous language, means that it is the ideal solution for rendering on the web.
+The reason has to do with our innate ability to continuously make mistakes.
+
+As programmers of the web, it will once in a blue moon occur that some of the code we write, isn't exactly ideal.
+
+If JavaScript refused to proceed after an initial error, that would leave the internet a very unreliable and brittle place.
+
+Luckily, of course, JavaScript is synchronous in nature, and it is only when we require the functionality of processes occurring in a specified sequence, that we grab for the tools, able to make that a reality. One such type of function enables us to do just that.
+
+
+A callback function is a function that is passed as an argument to another function and is executed after the completion of the other function.
 
 ## Callback function syntax
 
@@ -15,9 +25,14 @@ An anonymous function is a function without a name. You can declare an anonymous
 #### Example:
 
 ```javascript
-setTimeout(function() {
-  console.log("Execute later after 1 second");
-}, 1000);
+function sayHello(firstname, callback) {
+  console.log(`Hello ${firstname}`);
+  callback();
+});
+
+sayHello(firstname, function() {
+  console.log("The callback function");
+});
 ```
 
 ### Named functions
@@ -27,11 +42,11 @@ A named function is a regular function with a name. You can define the named fun
 #### Example:
 
 ```javascript
-function executeLater() {
-  console.log("Execute later after 1 second");
+function callbackFunction() {
+  console.log("The callback function");
 }
 
-setTimeout(executeLater, 1000);
+sayHello(firstname, callbackFunction);
 ```
 
 ### Arrow functions
@@ -41,9 +56,9 @@ Arrow functions, introduced in ES6, offer a more concise syntax for writing call
 #### Example:
 
 ```javascript
-setTimeout(() => {
-  console.log("Execute later after 1 second");
-}, 1000);
+sayHello(firstname, () => {
+  console.log("The callback function");
+});
 ```
 
 
