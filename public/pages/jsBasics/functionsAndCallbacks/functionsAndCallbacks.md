@@ -17,6 +17,14 @@ A callback function is a function that is passed as an argument to another funct
 ## Callback function syntax
 
 There are several ways to write callback functions in JavaScript. Here, we will discuss three common syntaxes: anonymous functions, named functions, and arrow functions.
+Now, before diving into the gist of it. The most optimal way of understanding these different types of syntaxes, is to show their individual implementation on the same function.
+
+```javascript
+function sayHello(firstname, callback) {
+  console.log(`Hello ${firstname}`);
+  callback();
+});
+```
 
 ### Anonymous functions
 
@@ -25,11 +33,6 @@ An anonymous function is a function without a name. You can declare an anonymous
 #### Example:
 
 ```javascript
-function sayHello(firstname, callback) {
-  console.log(`Hello ${firstname}`);
-  callback();
-});
-
 sayHello(firstname, function() {
   console.log("The callback function");
 });
@@ -62,31 +65,13 @@ sayHello(firstname, () => {
 ```
 
 
-## Using callback functions
+## In summation
 
-Now let's dive into a practical example of using a callback function. Suppose we have an array of numbers, and we want to apply a specific function to each number in the array. We can use a higher-order function like Array.prototype.map() that accepts a callback function as an argument.
+While the naming of a function, is generally considered to be best practice, there are no absolute truths in this world.
 
-#### Example:
+When creating objects, an unnamed function might be used to give an attribute an value. Now if the naming of this function doesn't provide a better understanding of the code, then it could be argued that it isn't necessary.
 
-```javascript
-const numbers = [1, 2, 3, 4, 5];
+In much the same way, arrow functions aren't always the best choice, despite their seemingly endless use cases.
 
-// Using an anonymous function
-const doubledNumbers = numbers.map(function(number) {
-  return number * 2;
-});
-console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
-
-// Using a named function
-function double(number) {
-  return number * 2;
-}
-const doubledNumbers2 = numbers.map(double);
-console.log(doubledNumbers2); // Output: [2, 4, 6, 8, 10]
-
-// Using an arrow function
-const doubledNumbers3 = numbers.map(number => number * 2);
-console.log(doubledNumbers3); // Output: [2, 4, 6, 8, 10]
-```
-
-As shown above, all three syntaxes can be used to write callback functions in JavaScript. Choose the one that best suits your needs and code readability.
+As the original purpose of these syntaxes, were to make things more clear, we should not forget to keep asking what the best tool for the job might be, all things considered.
+ 

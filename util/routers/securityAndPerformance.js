@@ -23,7 +23,6 @@ const subTopicsContent = templateEngine.renderListElements(subTopicsSidebar, ext
 const topicsContent = templateEngine.renderListElements(topicsNavbar, "");
 
 function endOfPath(nameOfPage) {
-    console.log(`nameOfPage: ${nameOfPage}`);
     return `securityAndPerformance/${nameOfPage}/${nameOfPage}.md`;
 }
 

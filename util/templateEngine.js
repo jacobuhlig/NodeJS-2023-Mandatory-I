@@ -34,7 +34,7 @@ marked.setOptions({
 function renderPage(page, path, folderAndFileName, config = {}) {
 
   let partOfPath = path;
-  console.log(111111 + partOfPath);
+  /* console.log(111111 + partOfPath); */
   
   // let basePath = partOfPath.split("/")[0];
   // console.log(basePath);
@@ -49,10 +49,10 @@ function renderPage(page, path, folderAndFileName, config = {}) {
     console.log(`hello`);
   }
   
-  console.log(`Before log`);
+  /* console.log(`Before log`);
   console.log(folderAndFileName);
   console.log(partOfPath);
-  console.log(`After log`);
+  console.log(`After log`); */
 
   const url = `<script src="/pages${partOfPath}${folderAndFileName}/${folderAndFileName}.js"></script>`
   console.log(url);
