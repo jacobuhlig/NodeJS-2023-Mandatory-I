@@ -1,3 +1,6 @@
 # Web Architecture
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse interdum consectetur libero id. Est placerat in egestas erat. Tempus egestas sed sed risus pretium.
+A fancy term, used to express the ins and outs of web development.
+Specifically, the structure in which everything is put together.
+
+This includes the frontend and backend (Csr vs. Ssr), as well as the protocol (HTTP), with which these are communicating.
