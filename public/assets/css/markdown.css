@@ -92,6 +92,10 @@ pre {
   border-radius: 10px;
 }
 
+code {
+  color: orange;
+}
+
 .content p {
   color: black;
   font-size: 1.1em;

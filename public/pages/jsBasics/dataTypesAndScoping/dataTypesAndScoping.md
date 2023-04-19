@@ -2,14 +2,14 @@
 
 In the attempt at sorting the topics covered throughout the semester, into manageable categories, we've come to realize that `Data Types` and `Scoping`, are essential in understanding the fundamentals of JavaScript. 
 
-We therefore deemed it appropriate to start out with this.
+On the basis of that, we thought it appropriate to start out with this.
 
 ## Data Types
 
 In total there are 8 data types in JavaScript.
 
 ### Primitive Data Types
-The following 5, are the primitive data types:
+The following 5, are the primitive data types (single value):
 
 <table>
   <tr>
@@ -107,7 +107,7 @@ const sayHello = function() {
 Even before creating variables though, we need to understand the concept of `Scoping`.
 Scoping defines the degree to which a variable is accessible within a program.
 
-In JavaScript, there are two types of scopes (actually three):
+In JavaScript, there are two types of scope (actually three):
 
 1. Local Scope
 2. Global Scope
@@ -122,13 +122,13 @@ This is the reason that the variable `message` is not accessible outside of the 
 function sayHello() {
   const message = "Hello, world!";
 }
-console.log(message); // ReferenceError: message is not defined
+console.log(message);
 ```
 
 
 ### Global Scope
 
-Global scope is then when a variable is defined outside of a function, and is therefore accessible throughout the entire program, hence the name `global`.
+Global scope is then when a variable is defined outside of a function, therein making it accessible throughout the entire program, hence the name `global`.
 Let's take the example from above, and move the variable `message` outside of the function `sayHello()`.
 Just like so:
 
@@ -150,7 +150,7 @@ Yes, you guessed it, a block is a piece of code that is enclosed within two curl
 We've actually been using block scope all along, without even realizing it, as both `let` (mutable) and `const` (immutable) are block scoped.
 
 As an important side note, one should always prioritize the use of const, as opposed to let.
-One of the reasons being that errors are more likely to be caught, using immutable variables.
+One of the reasons being that errors are more likely to be caught, using immutable variables, as it restricts scope to what's actually required.
 
 
 Lastly, and without further detailing, `var` is not block scoped.

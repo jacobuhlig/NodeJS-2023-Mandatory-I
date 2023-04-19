@@ -12,11 +12,11 @@ If JavaScript refused to proceed after an initial error, that would leave the in
 Luckily, of course, JavaScript is synchronous in nature, and it is only when we require the functionality of processes occurring in a specified sequence, that we grab for the tools, able to make that a reality. One such type of function enables us to do just that.
 
 
-A callback function is a function that is passed as an argument to another function and is executed after the completion of the other function.
+A callback function is a function that is passed on as an argument to another function and is executed after the completion of the other function.
 
 ## Callback function syntax
 
-There are several ways to write callback functions in JavaScript. Here, we will discuss three common syntaxes: anonymous functions, named functions, and arrow functions.
+There are several ways to write callback functions in JavaScript. Here, three common syntaxes will be discussed: `anonymous functions`, `named functions`, and `arrow functions`.
 Now, before diving into the gist of it. The most optimal way of understanding these different types of syntaxes, is to show their individual implementation on the same function.
 
 ```javascript
@@ -54,7 +54,9 @@ sayHello(firstname, callbackFunction);
 
 ### Arrow functions
 
-Arrow functions, introduced in ES6, offer a more concise syntax for writing callback functions. They are particularly useful when dealing with this keyword as they do not have their own this context.
+Arrow functions, introduced in ES6, offer a more concise syntax for writing callback functions.
+While `arrow functions` can be used using the surrounding scope (due to the missing `this` keyword), it isn't a viable solution for the construction of a new object (for the same reason).
+Meaning that an arrow function can't be instantiated.
 
 #### Example:
 
