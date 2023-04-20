@@ -17,16 +17,14 @@
         "rest-and-crud",
         "csr-vs.-ssr",
         "frontend-structure",
-        "redirection",
-        "node-and-packages"
+        "redirection"
     ],
     "node-and-packages": [
         "node-and-packages",
         "node.js-and-express",
         "import-export",
         "package.json-and-node_modules",
-        "static-files-in-express",
-        "security-and-performance"
+        "static-files-in-express"
     ],
     "security-and-performance": [
         "security-and-performance",

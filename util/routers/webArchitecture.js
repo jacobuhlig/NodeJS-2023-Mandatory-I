@@ -54,11 +54,6 @@ const nameOfPage_redirection = "redirection";
 const pathToRedirection = partOfPath + endOfPath(nameOfPage_redirection);
 const redirectionPath = templateEngine.readMarkdown(pathToRedirection);
 
-// node-and-packages
-const nameOfPage_node = "nodeAndPackages";
-const pathToNode = partOfPath + endOfPath(nameOfPage_node);
-const nodePath = templateEngine.readMarkdown(pathToNode);
-
 
 
 
@@ -117,17 +112,6 @@ router.get("/redirection/", (req, res) => {
         topics: topicsContent
     });
     res.send(redirectionPage);
-});
-
-// node-and-packages
-router.get("/node-and-packages/", (req, res) => {
-    const nodePage = templateEngine.renderPage(nodePath, (req.baseUrl + req.path), nameOfPage_node, {
-        tabTitle: "JS Basics | Node and Packages",
-        cssLink: cssHighlightPath + markdownPath,
-        subTopics: subTopicsContent,
-        topics: topicsContent
-    });
-    res.send(nodePage);
 });
 
 

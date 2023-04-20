@@ -56,12 +56,6 @@ const nameOfPage_staticFiles = "staticFilesInExpress";
 const pathToStaticFiles = partOfPath + endOfPath(nameOfPage_staticFiles);
 const staticFilesPath = templateEngine.readMarkdown(pathToStaticFiles);
 
-// security-and-performance
-const nameOfPage_security = "securityAndPerformance";
-const pathToSecurity = partOfPath + endOfPath(nameOfPage_security);
-const securityPath = templateEngine.readMarkdown(pathToSecurity);
-
-
 
 
 
@@ -120,17 +114,6 @@ router.get("/static-files-in-express", (req, res) => {
         topics: topicsContent
     });
     res.send(staticFilesPage);
-});
-
-// security-and-performance
-router.get("/security-and-performance", (req, res) => {
-    const securityPage = templateEngine.renderPage(securityPath, (req.baseUrl + req.path), nameOfPage_security, {
-        tabTitle: "Mandatory | Security and Performance",
-        cssLink: cssHighlightPath + markdownPath,
-        subTopics: subTopicsContent,
-        topics: topicsContent
-    });
-    res.send(securityPage);
 });
 
 
