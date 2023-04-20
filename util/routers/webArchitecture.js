@@ -35,7 +35,7 @@ const pathToWebArchitecture = partOfPath + endOfPath(nameOfPage_webArchitecture)
 const webArchitecturePath = templateEngine.readMarkdown(pathToWebArchitecture);
 
 // rest-api-and-crud
-const nameOfPage_restApi = "restApiAndCrud";
+const nameOfPage_restApi = "restAndCrud";
 const pathToRestApi = partOfPath + endOfPath(nameOfPage_restApi);
 const restApiPath = templateEngine.readMarkdown(pathToRestApi);
 
@@ -75,10 +75,10 @@ router.get("/", (req, res) => {
 });
 
 
-// rest-api-and-crud
-router.get("/rest-api-and-crud/", (req, res) => {
+// rest-and-crud
+router.get("/rest-and-crud/", (req, res) => {
     const restApiPage = templateEngine.renderPage(restApiPath, (req.baseUrl + req.path), nameOfPage_restApi, {
-        tabTitle: "JS Basics | REST API and CRUD",
+        tabTitle: "JS Basics | REST and CRUD",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -86,8 +86,8 @@ router.get("/rest-api-and-crud/", (req, res) => {
     res.send(restApiPage);
 });
 
-// ssr-vs.-csr
-router.get("/ssr-vs.-csr/", (req, res) => {
+// csr-vs.-ssr
+router.get("/csr-vs.-ssr/", (req, res) => {
     const ssrPage = templateEngine.renderPage(ssrPath, (req.baseUrl + req.path), nameOfPage_ssr, {
         tabTitle: "JS Basics | SSR vs. CSR",
         cssLink: cssHighlightPath + markdownPath,

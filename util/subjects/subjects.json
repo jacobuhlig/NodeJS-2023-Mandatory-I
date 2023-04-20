@@ -14,8 +14,8 @@
     ],
     "web-architecture": [
         "web-architecture",
-        "rest-api-and-crud",
-        "ssr-vs.-csr",
+        "rest-and-crud",
+        "csr-vs.-ssr",
         "frontend-structure",
         "redirection",
         "node-and-packages"

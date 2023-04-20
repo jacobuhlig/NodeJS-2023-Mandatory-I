@@ -34,13 +34,7 @@ marked.setOptions({
 function renderPage(page, path, folderAndFileName, config = {}) {
 
   let partOfPath = path;
-  /* console.log(111111 + partOfPath); */
-  
-  // let basePath = partOfPath.split("/")[0];
-  // console.log(basePath);
-
-  // let basePath1 = partOfPath.split("/")[1];
-  // console.log(basePath1);
+ 
   if (partOfPath.includes("-") || partOfPath.split("/").length > 1) {
     console.log(`here`);
     let basePath = partOfPath.split("/")[1];
@@ -49,14 +43,9 @@ function renderPage(page, path, folderAndFileName, config = {}) {
     console.log(`hello`);
   }
   
-  /* console.log(`Before log`);
-  console.log(folderAndFileName);
-  console.log(partOfPath);
-  console.log(`After log`); */
 
   const url = `<script src="/pages${partOfPath}${folderAndFileName}/${folderAndFileName}.js"></script>`
   console.log(url);
-  // <script src="/pages/loops/loopsGeneral/loopsGeneral.js"></script>
 
 
   const navbar = fs.readFileSync("./public/components/00._navbar/navbar.html").toString()
@@ -102,16 +91,6 @@ function renderListElements(arrayOfStrings, endpoint) {
     const visualElement = capitalizeWords(arrayOfStrings[i]);
 
 
-
-    /* Below should be revised, since I need the actual path, in order to make something flexible and dynamic. 
-    ${containsAboutAndLoops ? "class=\"active\"" : ""}
-    */
-    /* let containsAboutAndLoops = false; */
-    /* if (arrayOfStrings.includes("about") && arrayOfStrings.includes("loops")) {
-      containsAboutAndLoops = true;
-    } */
-
-
     let link;
     if (currentEndpoint === endpoint || endpoint === "") {
       link = `
@@ -140,10 +119,6 @@ function capitalizeWords(str) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
-
-// function capitalizeFirstLetter(string) {
-//   return string.charAt(0).toUpperCase() + string.slice(1);
-// }
 
 
 
