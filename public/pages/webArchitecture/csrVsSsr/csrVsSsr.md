@@ -3,7 +3,7 @@
 Client-Side Rendering and Server-side Rendering (CSR vs. SSR), are two different ways to render web content.
 What it really comes down to, is the way in which HTML content is rendered.
 
-**Which is the better option?**
+>Which is the better option?
 
 ## Client-Side Rendering
 With CSR, the HTML content is rendered on the side of the client.
