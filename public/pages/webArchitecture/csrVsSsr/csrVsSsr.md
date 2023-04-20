@@ -1,0 +1,3 @@
+# CSR vs. SSR
+
+Client-Side rendering and Server-side render (CSR vs. SSR), is two different ways to...

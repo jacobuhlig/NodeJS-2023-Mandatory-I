@@ -40,7 +40,7 @@ const pathToRestApi = partOfPath + endOfPath(nameOfPage_restApi);
 const restApiPath = templateEngine.readMarkdown(pathToRestApi);
 
 // ssr-vs.-csr
-const nameOfPage_ssr = "ssrVsCsr";
+const nameOfPage_ssr = "csrVsSsr";
 const pathToSsr = partOfPath + endOfPath(nameOfPage_ssr);
 const ssrPath = templateEngine.readMarkdown(pathToSsr);
 
