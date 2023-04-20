@@ -26,7 +26,7 @@ Finally, `Content Negotiation` allows for the client and server, respectively, t
 
 
 ### Summation
-REST is a concept, whereas RESTful is an adjective, used to indicate that a particual web service, lives up to the concept of REST.
+REST is a concept, whereas RESTful is an adjective, used to indicate that a particular web service, lives up to the concept of REST.
 
 
 ## CRUD
