@@ -162,3 +162,8 @@ hr {
   margin-top: 17px;
   border-top: 1px solid rgb(59, 112, 185);
 }
+
+a {
+  color: rgb(59, 112, 185);
+  text-decoration: none;
+}

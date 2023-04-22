@@ -61,7 +61,7 @@ const redirectionPath = templateEngine.readMarkdown(pathToRedirection);
 // web-architecture
 router.get("/", (req, res) => {
     const jsBasicsPage = templateEngine.renderPage(webArchitecturePath, (req.baseUrl + req.path), nameOfPage_webArchitecture, {
-        tabTitle: "Mandatory | JS Basics",
+        tabTitle: "Mandatory | Web Architecture",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -73,7 +73,7 @@ router.get("/", (req, res) => {
 // rest-and-crud
 router.get("/rest-and-crud/", (req, res) => {
     const restApiPage = templateEngine.renderPage(restApiPath, (req.baseUrl + req.path), nameOfPage_restApi, {
-        tabTitle: "JS Basics | REST and CRUD",
+        tabTitle: "Web Architecture | REST and CRUD",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -84,7 +84,7 @@ router.get("/rest-and-crud/", (req, res) => {
 // csr-vs.-ssr
 router.get("/csr-vs.-ssr/", (req, res) => {
     const ssrPage = templateEngine.renderPage(ssrPath, (req.baseUrl + req.path), nameOfPage_ssr, {
-        tabTitle: "JS Basics | SSR vs. CSR",
+        tabTitle: "Web Architecture | SSR vs. CSR",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -95,7 +95,7 @@ router.get("/csr-vs.-ssr/", (req, res) => {
 // frontend-structure
 router.get("/frontend-structure/", (req, res) => {
     const frontendPage = templateEngine.renderPage(frontendPath, (req.baseUrl + req.path), nameOfPage_frontend, {
-        tabTitle: "JS Basics | Frontend Structure",
+        tabTitle: "Web Architecture | Frontend Structure",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -106,7 +106,7 @@ router.get("/frontend-structure/", (req, res) => {
 // redirection
 router.get("/redirection/", (req, res) => {
     const redirectionPage = templateEngine.renderPage(redirectionPath, (req.baseUrl + req.path), nameOfPage_redirection, {
-        tabTitle: "JS Basics | Redirection",
+        tabTitle: "Web Architecture | Redirection",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent

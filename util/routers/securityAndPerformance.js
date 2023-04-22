@@ -71,7 +71,7 @@ router.get("/", (req, res) => {
 // xss-prevention
 router.get("/xss-prevention/", (req, res) => {
     const xssPage = templateEngine.renderPage(xssPath, (req.baseUrl + req.path), nameOfPage_xss, {
-        tabTitle: "JS Basics | XSS Prevention",
+        tabTitle: "Security & Performance | XSS Prevention",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -82,7 +82,7 @@ router.get("/xss-prevention/", (req, res) => {
 // memory-optimization
 router.get("/memory-optimization/", (req, res) => {
     const memoryPage = templateEngine.renderPage(memoryPath, (req.baseUrl + req.path), nameOfPage_memory, {
-        tabTitle: "JS Basics | Memory Optimization",
+        tabTitle: "Security & Performance | Memory Optimization",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -93,7 +93,7 @@ router.get("/memory-optimization/", (req, res) => {
 // ssr-vs.-csr-factors
 router.get("/ssr-vs.-csr-factors/", (req, res) => {
     const ssrPage = templateEngine.renderPage(ssrPath, (req.baseUrl + req.path), nameOfPage_ssr, {
-        tabTitle: "JS Basics | SSR vs. CSR Factors",
+        tabTitle: "Security & Performance | SSR vs. CSR Factors",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -105,7 +105,7 @@ router.get("/ssr-vs.-csr-factors/", (req, res) => {
 router.get("/sanitization-and-npm/", (req, res) => {
 
     const sanitizationPage = templateEngine.renderPage(sanitizationPath, (req.baseUrl + req.path), nameOfPage_sanitization, {
-        tabTitle: "JS Basics | Sanitization & NPM",
+        tabTitle: "Security & Performance | Sanitization & NPM",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent

@@ -15,7 +15,7 @@
     "web-architecture": [
         "web-architecture",
         "rest-and-crud",
-        "csr-vs.-ssr",
+        "cSR-vs.-sSR",
         "frontend-structure",
         "redirection"
     ],
@@ -24,13 +24,14 @@
         "node.js-and-express",
         "import-export",
         "package.json-and-node_modules",
-        "static-files-in-express"
+        "static-files-in-express",
+        "npm"
     ],
     "security-and-performance": [
         "security-and-performance",
-        "xss-prevention",
+        "xSS-prevention",
         "memory-optimization",
-        "ssr-vs.-csr-factors",
+        "sSR-vs.-cSR-factors",
         "sanitization-and-npm"
     ]
 }

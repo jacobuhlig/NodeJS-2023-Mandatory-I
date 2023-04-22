@@ -56,6 +56,10 @@ const nameOfPage_staticFiles = "staticFilesInExpress";
 const pathToStaticFiles = partOfPath + endOfPath(nameOfPage_staticFiles);
 const staticFilesPath = templateEngine.readMarkdown(pathToStaticFiles);
 
+// npm
+const nameOfPage_npm = "npm";
+const pathToNpm = partOfPath + endOfPath(nameOfPage_npm);
+const npmPath = templateEngine.readMarkdown(pathToNpm);
 
 
 
@@ -75,7 +79,7 @@ router.get("/", (req, res) => {
 // node.js-and-express
 router.get("/node.js-and-express", (req, res) => {
     const nodeAndExpressPage = templateEngine.renderPage(nodeAndExpressPath, (req.baseUrl + req.path), nameOfPage_nodeAndExpress, {
-        tabTitle: "Mandatory | Node.js and Express",
+        tabTitle: "Node and Packages | Node.js and Express",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -86,7 +90,7 @@ router.get("/node.js-and-express", (req, res) => {
 // import-export
 router.get("/import-export", (req, res) => {
     const importExportPage = templateEngine.renderPage(importExportPath, (req.baseUrl + req.path), nameOfPage_importExport, {
-        tabTitle: "Mandatory | Import and Export",
+        tabTitle: "Node and Packages | Import and Export",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -97,7 +101,7 @@ router.get("/import-export", (req, res) => {
 // package.json-and-node_modules
 router.get("/package.json-and-node_modules", (req, res) => {
     const packageJsonPage = templateEngine.renderPage(packageJsonPath, (req.baseUrl + req.path), nameOfPage_packageJson, {
-        tabTitle: "Mandatory | Package.json and Node Modules",
+        tabTitle: "Node and Packages | Package.json and Node Modules",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
@@ -108,12 +112,23 @@ router.get("/package.json-and-node_modules", (req, res) => {
 // static-files-in-express
 router.get("/static-files-in-express", (req, res) => {
     const staticFilesPage = templateEngine.renderPage(staticFilesPath, (req.baseUrl + req.path), nameOfPage_staticFiles, {
-        tabTitle: "Mandatory | Static Files in Express",
+        tabTitle: "Node and Packages | Static Files in Express",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent
     });
     res.send(staticFilesPage);
+});
+
+// npm
+router.get("/npm", (req, res) => {
+    const npmPage = templateEngine.renderPage(npmPath, (req.baseUrl + req.path), nameOfPage_npm, {
+        tabTitle: "Node and Packages | NPM",
+        cssLink: cssHighlightPath + markdownPath,
+        subTopics: subTopicsContent,
+        topics: topicsContent
+    });
+    res.send(npmPage);
 });
 
 
