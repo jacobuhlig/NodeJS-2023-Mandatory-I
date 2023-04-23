@@ -25,7 +25,7 @@
         "import-export",
         "package.json-and-node_modules",
         "static-files-in-express",
-        "npm"
+        "nPM"
     ],
     "security-and-performance": [
         "security-and-performance",

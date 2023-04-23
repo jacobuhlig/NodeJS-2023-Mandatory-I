@@ -1,18 +1,19 @@
 # NPM
 
 ## Package Manager
-To understand what NPM is, first we must understand what a package manager is.
+As NPM is a package manager, we must first understand what that is.
 
 A package manager is software that simplifies the process of installing, uninstalling and updating packages/dependencies.
 What makes the idea of a package manager so appealing is that it is able to manage hundreds of packages in a consistent manner.
 
-So we no longer have to worry about manually detecting software left over from a (now uninstalled) application.
+So for instance, we now no longer have to worry about manually detecting software left over from a (now uninstalled) application and delete it ourselves, as this is just taken care of by the package manager (which in this case is NPM).
 
 
 ## NPM
 NPM is a package manager.
 
-Specifically it was created to manage packages in the language of JavaScript, and has since become the default package manager for `node.js`, meaning that it is bundled with node initially. This certainly has helped solidify its position as the universal package manager for node.
+Specifically it was created to manage packages in the language of JavaScript, and has since become the default package manager for `node.js`, meaning that it is bundled with the node installer.
+This certainly has helped solidify its position as the universal package manager for node.
 
 Additionally, you'd have a tough time getting around using `npm` altogether, despite the switch to another package manager such as `Yarn` or `pnpm`.
 
