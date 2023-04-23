@@ -36,6 +36,3 @@ At this point we're now able to begin setting up our first project, which actual
 app.METHOD(PATH, HANDLER)
 ```
 
-
-(Remember to divulge that its implementation will be explained in-depth later in the "Node and Packages" section.)
-(   Side note - should this be before or after the "package.json and node_modules" sub-section, I don't currently know.)
