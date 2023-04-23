@@ -32,6 +32,16 @@ const app = express();              // 'app' is universally considered to be the
 
 At this point we're now able to begin setting up our first project, which actually doesn't require all that much.
 
+Now the first thing we'd want to do is tell express where to locate our <a href="/node-and-packages/static-files-in-express">static files</a> (files sent to the client - unmodified).
+
+
+
+
+
+
+
+
+
 ```javascript
 app.METHOD(PATH, HANDLER)
 ```
