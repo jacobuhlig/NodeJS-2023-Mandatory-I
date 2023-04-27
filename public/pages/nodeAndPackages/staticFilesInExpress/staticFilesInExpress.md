@@ -15,3 +15,5 @@ It's important to note that the returned middleware function handles the req, re
 
 Here we're stating that our application (running express), should serve the files, located in the `public` directory statically.
 This means that they won't be altered or in any way modified by the server. They will be sent directly to the client.
+
+It is also important to stress that the ability to differentiate between files, allowedly accessible from the client, and those only accessible from the server, is essential to understand, before serving an entire directory named `public`.

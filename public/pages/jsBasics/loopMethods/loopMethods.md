@@ -5,6 +5,7 @@ In the case of loop array methods, the five most essential will be reviewed. Hop
 
 Broadly speaking, loop array methods manipulate arrays in different ways, based on the argument provided to the given method.
 In many cases, this results in the code being more readable, as we, rather than telling JavaScript how we want something, we just say what we want, and like magic, the request is granted, with minimal effort on the part of the developer.
+As a consequence it also results in code with fewer side effects (Ideally none).
 
 One thing we do have to know though, is how to use these methods, so here we go.
 

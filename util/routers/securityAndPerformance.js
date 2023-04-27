@@ -33,6 +33,11 @@ const nameOfPage_security = "securityAndPerformance";
 const pathToSecurity = partOfPath + endOfPath(nameOfPage_security);
 const securityPath = templateEngine.readMarkdown(pathToSecurity);
 
+// git
+const nameOfPage_git = "git";
+const pathToGit = partOfPath + endOfPath(nameOfPage_git);
+const gitPath = templateEngine.readMarkdown(pathToGit);
+
 // xss-prevention
 const nameOfPage_xss = "xssPrevention";
 const pathToXss = partOfPath + endOfPath(nameOfPage_xss);
@@ -66,6 +71,17 @@ router.get("/", (req, res) => {
         topics: topicsContent
     });
     res.send(securityPage);
+});
+
+// git
+router.get("/git/", (req, res) => {
+    const gitPage = templateEngine.renderPage(gitPath, (req.baseUrl + req.path), nameOfPage_git, {
+        tabTitle: "Security & Performance | Git",
+        cssLink: cssHighlightPath + markdownPath,
+        subTopics: subTopicsContent,
+        topics: topicsContent
+    });
+    res.send(gitPage);
 });
 
 // xss-prevention

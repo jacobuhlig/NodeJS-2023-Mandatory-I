@@ -4,6 +4,7 @@ Now before delving into the structure of the frontend, it would be appropriate t
 There are various reasons for this, but the main one being that there'd be a clear separation of concerns.
 
 Regardless. Let's proceed with the structure of the frontend.
+
 <br></br>
 
 ___
@@ -33,11 +34,12 @@ In this folder all of the textual content resides.
 
 In this project the structure has been set up as such:
 
-At the top level, there are topic, under each of which are an array of sub-topics.
+At the top level, there are topics, under each of which is an array of sub-topics.
 Within each sub-topic folder, there are between one to three files.
 
 At minimum, there has to be a markdown file (.md), as this is essential for the rendering of the page itself.
 
-However, it isn't always necessary to have corresponding javascript file (.js), as the functionality needs of the given page is inadequate.
+However, it isn't always necessary to have corresponding javascript file (.js), as the functionality needs of the given page aren't existent.
 
 Additionally, there might also not be a need for a separate style-sheet file (.css), if all relevant styling is being applied by either the `main.css` or the `markdown.css`.
+

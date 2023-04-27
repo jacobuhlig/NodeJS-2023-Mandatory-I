@@ -54,6 +54,11 @@ const nameOfPage_redirection = "redirection";
 const pathToRedirection = partOfPath + endOfPath(nameOfPage_redirection);
 const redirectionPath = templateEngine.readMarkdown(pathToRedirection);
 
+// coding-standards
+const nameOfPage_standards = "codingStandards";
+const pathToStandards = partOfPath + endOfPath(nameOfPage_standards);
+const standardsPath = templateEngine.readMarkdown(pathToStandards);
+
 
 
 
@@ -112,6 +117,17 @@ router.get("/redirection/", (req, res) => {
         topics: topicsContent
     });
     res.send(redirectionPage);
+});
+
+// coding-standards
+router.get("/coding-standards/", (req, res) => {
+    const standardsPage = templateEngine.renderPage(standardsPath, (req.baseUrl + req.path), nameOfPage_standards, {
+        tabTitle: "Web Architecture | Coding-standards",
+        cssLink: cssHighlightPath + markdownPath,
+        subTopics: subTopicsContent,
+        topics: topicsContent
+    });
+    res.send(standardsPage);
 });
 
 
