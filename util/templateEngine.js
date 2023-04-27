@@ -6,6 +6,7 @@ import {marked} from "marked";
 
 const renderer = new marked.Renderer();
 
+// Line 10 to 32 is taken directly from the marked documentation
 // Override of the default code block rendering
 renderer.code = (code, language) => {
   const validLang = !!(language && hljs.getLanguage(language));

@@ -8,9 +8,17 @@ Best practice when it comes to redirection, is in the validation of an authentic
 But before we're able to do this, I'll go through one way with CSR and one with SSR.
 
 ## CSR
-With various different approaches to the redirection itself, it would be tiresome to go through them all here.
+Client-Side Redirection is when JavaScript makes it so that you're redirected, without any need for server intervention.
 
-Hence, is a single demonstration (`window.location.href`):
+`anchor tag` (the easiest):
+```html
+<p>
+  <a href="/node-and-packages/npm">here</a>
+</p>
+```
+
+
+`window.location` (not as inclusive toward people with accessibility needs):
 ```js
 if (!checkAuthentication()) {
   window.location.href = "/login.html";
@@ -19,9 +27,25 @@ if (!checkAuthentication()) {
 }
 ```
 
+`meta refresh tag` (might as well be deprecated):
+
+I always located in the head-tag, and is able to redirect after a specified amount of time (in this case; 5 seconds).
+```html
+<head>
+  <title>Meta Refresh Redirect</title>
+  <meta http-equiv="refresh" content="5;url=https://www.welcome.com">
+</head>
+```
+
+The fact that the `meta`-tag is still supported in modern browsers, remains a mystery till this day.
+
+You have a limited amount of control, when utilizing this tag, and your site might suffer penalties in the ranking in search results, as SO's could deem the site to contain content of poor quality.
+
+
+
 
 ## SSR
-On a fundamental level, one could redirect as easy as:
+On a fundamental level, one could redirect as easily as:
 ```js
 app.get("/", (req, res) => {
     return res.redirect("/welcomePage");            

@@ -5,6 +5,25 @@ Node.js is a runtime environment, which allows us to run JavaScript code on the 
 
 And it is on this basis, that we're able to utilize some tools that make development much easier.
 
+### How to run node
+In the case of `app.js` being the program's main entrypoint.
+
+```console
+$ node app.js
+```
+
+### nodemon
+Although there might not be anything wrong with using `node` again and again, we have to continuously run the command, every time a change has been made, so as to view the result of the change.
+
+Fret no more, as the solution is no more complicated than that of `nodemon`.
+
+```console
+$ nodemon app.js
+```
+
+With the above command, every time a change is made to the files (the type of file that is changed, can also be defined in the command, or in a separate file called `nodemon.json`).
+
+
 ## express
 One such tool is the framework, `express`.
 

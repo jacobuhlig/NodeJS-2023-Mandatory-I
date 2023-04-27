@@ -61,10 +61,20 @@ const frontpagePage = templateEngine.renderFrontpage(frontpagePath, {
 // Endpoints
 
 // Frontpage
-app.get("/", (req, res) => {
+/* app.get("/", (req, res) => {
   res.send(frontpagePage)
-});
+}); */
 
+app.get("/", async (req, res) => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    const todo = await response.json();
+    res.send(todo);
+  } catch (error) {
+    console.error("Error fetching todo:", error);
+    res.status(500).send("Error fetching todo");
+  }
+});
 
 
 // Status message

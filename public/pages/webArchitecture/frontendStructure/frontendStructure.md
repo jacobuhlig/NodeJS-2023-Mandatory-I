@@ -27,7 +27,14 @@ In this folder, there are
 ## components
 In this folder there are the various reusable pieces of content.
 
-These are used by the template engine (templateEngine.js) to produce the final page rendering.
+These include some of the following:
+1. navbar.html
+2. sidebar.html
+3. footer.html
+
+Now instead of writing out the entire navbar in each html file, we're able to string together a page, that consists of these individual elements.
+
+These are used by the template engine (templateEngine.js) to produce the final page-rendering.
 
 ## pages
 In this folder all of the textual content resides.
