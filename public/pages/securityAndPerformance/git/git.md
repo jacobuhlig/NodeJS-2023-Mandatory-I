@@ -59,6 +59,6 @@ See the difference made to files:
 $ git diff
 ```
 
-If prevented from merging, or some other reason, `git stash` can be a great choice when conflicts take longer to solve, than one party just redoing whatever was preventing the merge:
+If prevented from merging, or some other reason, `git stash` can be a great choice when conflicts take longer to solve, than one party just redoing whatever was preventing the merge initially:
 ```console
 $ git stash
