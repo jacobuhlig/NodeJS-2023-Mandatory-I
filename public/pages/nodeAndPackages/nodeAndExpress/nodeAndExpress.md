@@ -27,6 +27,8 @@ After the initial import has been made, we instantiate `express`.
 const app = express();              // 'app' is universally considered to be the standard choice for its instance.
 ```
 
+Deeper look into <a href="/node-and-packages/import-export">import/export</a>
+
 
 ### Further use of express
 
@@ -34,15 +36,44 @@ At this point we're now able to begin setting up our first project, which actual
 
 Now the first thing we'd want to do is tell express where to locate our <a href="/node-and-packages/static-files-in-express">static files</a> (files sent to the client - unmodified).
 
+It is then after this that we <a href="/node-and-packages/import-export">import</a> any relevant resources, upon which the rendering of a given page relies.
 
+The process of rendering the page, is further detailed under the `Security and Performance` section.
 
-
-
-
-
-
+After the individual pages are rendered fully, we're able to send back that same page when a relevant endpoint is reached by the user of the client.
 
 ```javascript
-app.METHOD(PATH, HANDLER)
+app.METHOD(path, callback)
 ```
+
+As the use of `express` is constructed as show above, the same approach is taken below.
+
+```javascript
+app.get("/", (req, res) => {
+  res.send(frontpagePage)
+});
+```
+
+Using `GET` we're defining the method, followed by the endpoint (path), and a callback function, returning the frontpagePage.
+<br></br>
+
+___
+<br>
+
+Lastly, in order to even attempt the reaching of the above endpoint, the application has to be running on a server.
+
+We set this up with the following syntax.
+
+```javascript
+const PORT = 8080;
+app.listen(PORT, (error) => {
+  if (error) {
+    console.log(error);
+  }
+  console.log("The server is running on port", PORT);
+});
+```
+
+When we run the application using `node`, the console message will display "The server is running on port 8080". That is, only if no error were encountered up until that point.
+
 

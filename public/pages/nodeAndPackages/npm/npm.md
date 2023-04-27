@@ -146,4 +146,4 @@ Alternatively, we could change the content of the dependencies in the `package.j
 $ npm i
 ```
 
-Whether the change was one or more additions or deletions, is irrelevant, as npm will delete any packages no longer represented in the `package.json`, as well as install the ones not yet installed.
+Whether the change was one or more additions or deletions, is irrelevant, as npm will delete any packages no longer represented in the `package.json`, as well as install the ones not yet installed (<a href="/node-and-packages/package.json-and-node_modules">node_modules</a>).

@@ -14,4 +14,10 @@ This let's npm know that there is a file by the name `package.json`, and that th
 
 
 ## node_modules
-Node modules are...
+Node modules is a directory that is created/recreated when the command `npm i`, is used.
+
+It is herein that all project relevant dependencies are located.
+
+Additionally, as the size of the project increases, the `node_modules` directory increases as well.
+
+Therefore it is commonplace, not to include `node_modules` in version-control (Git).
