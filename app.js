@@ -65,10 +65,14 @@ app.get("/", (req, res) => {
   res.send(frontpagePage)
 });
 
+app.get("/auth", (req, res) => {
+  res.send(frontpagePage)
+});
+
 
 
 // Status message
-const PORT = 8080;
+const PORT = 8081;
 app.listen(PORT, (error) => {
   if (error) {
     console.log(error);

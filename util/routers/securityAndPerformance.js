@@ -54,7 +54,7 @@ const pathToMemory = partOfPath + endOfPath(nameOfPage_memory);
 const memoryPath = templateEngine.readMarkdown(pathToMemory);
 
 // ssr-vs.-csr-factors
-const nameOfPage_ssr = "ssrVsCsrFactors";
+const nameOfPage_ssr = "ssrVsCsr";
 const pathToSsr = partOfPath + endOfPath(nameOfPage_ssr);
 const ssrPath = templateEngine.readMarkdown(pathToSsr);
 
@@ -122,10 +122,10 @@ router.get("/memory-optimization/", (req, res) => {
     res.send(memoryPage);
 });
 
-// ssr-vs.-csr-factors
-router.get("/ssr-vs.-csr-factors/", (req, res) => {
+// ssr-vs.-csr
+router.get("/ssr-vs.-csr/", (req, res) => {
     const ssrPage = templateEngine.renderPage(ssrPath, (req.baseUrl + req.path), nameOfPage_ssr, {
-        tabTitle: "Security & Performance | SSR vs. CSR Factors",
+        tabTitle: "Security & Performance | SSR vs. CSR",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
         topics: topicsContent

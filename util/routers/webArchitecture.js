@@ -39,11 +39,6 @@ const nameOfPage_restApi = "restAndCrud";
 const pathToRestApi = partOfPath + endOfPath(nameOfPage_restApi);
 const restApiPath = templateEngine.readMarkdown(pathToRestApi);
 
-// ssr-vs.-csr
-const nameOfPage_ssr = "csrVsSsr";
-const pathToSsr = partOfPath + endOfPath(nameOfPage_ssr);
-const ssrPath = templateEngine.readMarkdown(pathToSsr);
-
 // frontend-structure
 const nameOfPage_frontend = "frontendStructure";
 const pathToFrontend = partOfPath + endOfPath(nameOfPage_frontend);
@@ -84,17 +79,6 @@ router.get("/rest-and-crud/", (req, res) => {
         topics: topicsContent
     });
     res.send(restApiPage);
-});
-
-// csr-vs.-ssr
-router.get("/csr-vs.-ssr/", (req, res) => {
-    const ssrPage = templateEngine.renderPage(ssrPath, (req.baseUrl + req.path), nameOfPage_ssr, {
-        tabTitle: "Web Architecture | SSR vs. CSR",
-        cssLink: cssHighlightPath + markdownPath,
-        subTopics: subTopicsContent,
-        topics: topicsContent
-    });
-    res.send(ssrPage);
 });
 
 // frontend-structure

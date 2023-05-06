@@ -38,11 +38,10 @@ But what is essential here, is that we're not referencing a location, from where
 As with everything, there are both benefits and disadvantages in using both rendering techniques.
 
 The reason that CSR is an obvious choice for Single-Page Applications (SPA's), is because that it is less strenuous on the server side.
-Another reason that CSR is used on SPA's is because the size of these applications allows for the entirety to be loaded in the `public` directory.
+It's less strenuous because pages are rendered in the client, from the initially loaded `public` directory.
 
-With this method, There is an initial load time, but subsequent loading will dramatically decrease, if not seize, altogether (based on the type of HTTP methods used)
+Due to an increase in resources, this results in a slower initial page load, but will depending on the type of device in question, provide a subsequent smoother UX.
 
-Whereas with larger scale systems, this would not be a good solution, due to the difference in internet access and individual machine computing power.
+With larger applications, SSR might be better suited, especially if the hardware isn't fast enough, or with a good enough internet access.
 
-
-
+It's also worth noting that SEO (Search Engine Optimization) is optimally done with SSR, because the search engine crawlers easily are able to parse already fully-rendered HTML content.

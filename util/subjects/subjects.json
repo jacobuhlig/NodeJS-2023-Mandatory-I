@@ -15,7 +15,6 @@
     "web-architecture": [
         "web-architecture",
         "rest-and-crud",
-        "cSR-vs.-sSR",
         "frontend-structure",
         "redirection",
         "coding-standards"
@@ -34,7 +33,6 @@
         "fetch",
         "xSS-prevention",
         "memory-optimization",
-        "sSR-vs.-cSR-factors",
-        "sanitization-and-npm"
+        "sSR-vs.-cSR"
     ]
 }
