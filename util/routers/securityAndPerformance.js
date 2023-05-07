@@ -11,6 +11,7 @@ const cssHighlightPath = `<link rel="stylesheet" href="/assets/css/syntax-highli
 const markdownPath = `<link rel="stylesheet" href="/assets/css/markdown.css" />`;
 
 
+
 // Content titles
 import subjects from "../subjects/subjects.js";
 const topicsNavbar = subjects.getSubjects();
@@ -53,7 +54,7 @@ const nameOfPage_memory = "memoryOptimization";
 const pathToMemory = partOfPath + endOfPath(nameOfPage_memory);
 const memoryPath = templateEngine.readMarkdown(pathToMemory);
 
-// ssr-vs.-csr-factors
+// ssr-vs.-csr
 const nameOfPage_ssr = "ssrVsCsr";
 const pathToSsr = partOfPath + endOfPath(nameOfPage_ssr);
 const ssrPath = templateEngine.readMarkdown(pathToSsr);
@@ -65,10 +66,9 @@ const sanitizationPath = templateEngine.readMarkdown(pathToSanitization);
 
 
 
-
 //security-and-performance
-router.get("/", (req, res) => {
-    const securityPage = templateEngine.renderPage(securityPath
+router.get("/", async (req, res) => {
+    const securityPage = await templateEngine.renderPage(securityPath
 , (req.baseUrl + req.path), nameOfPage_security, {
         tabTitle: "Mandatory | Security & Performance",
         cssLink: cssHighlightPath + markdownPath,
@@ -79,8 +79,8 @@ router.get("/", (req, res) => {
 });
 
 // git
-router.get("/git/", (req, res) => {
-    const gitPage = templateEngine.renderPage(gitPath, (req.baseUrl + req.path), nameOfPage_git, {
+router.get("/git/", async (req, res) => {
+    const gitPage = await templateEngine.renderPage(gitPath, (req.baseUrl + req.path), nameOfPage_git, {
         tabTitle: "Security & Performance | Git",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -90,8 +90,8 @@ router.get("/git/", (req, res) => {
 });
 
 // fetch
-router.get("/fetch/", (req, res) => {
-    const fetchPage = templateEngine.renderPage(fetchPath, (req.baseUrl + req.path), nameOfPage_fetch, {
+router.get("/fetch/", async (req, res) => {
+    const fetchPage = await templateEngine.renderPage(fetchPath, (req.baseUrl + req.path), nameOfPage_fetch, {
         tabTitle: "Security & Performance | Fetch",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -101,8 +101,8 @@ router.get("/fetch/", (req, res) => {
 });
 
 // xss-prevention
-router.get("/xss-prevention/", (req, res) => {
-    const xssPage = templateEngine.renderPage(xssPath, (req.baseUrl + req.path), nameOfPage_xss, {
+router.get("/xss-prevention/", async (req, res) => {
+    const xssPage = await templateEngine.renderPage(xssPath, (req.baseUrl + req.path), nameOfPage_xss, {
         tabTitle: "Security & Performance | XSS Prevention",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -112,8 +112,8 @@ router.get("/xss-prevention/", (req, res) => {
 });
 
 // memory-optimization
-router.get("/memory-optimization/", (req, res) => {
-    const memoryPage = templateEngine.renderPage(memoryPath, (req.baseUrl + req.path), nameOfPage_memory, {
+router.get("/memory-optimization/", async (req, res) => {
+    const memoryPage = await templateEngine.renderPage(memoryPath, (req.baseUrl + req.path), nameOfPage_memory, {
         tabTitle: "Security & Performance | Memory Optimization",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -123,8 +123,8 @@ router.get("/memory-optimization/", (req, res) => {
 });
 
 // ssr-vs.-csr
-router.get("/ssr-vs.-csr/", (req, res) => {
-    const ssrPage = templateEngine.renderPage(ssrPath, (req.baseUrl + req.path), nameOfPage_ssr, {
+router.get("/ssr-vs.-csr/", async (req, res) => {
+    const ssrPage = await templateEngine.renderPage(ssrPath, (req.baseUrl + req.path), nameOfPage_ssr, {
         tabTitle: "Security & Performance | SSR vs. CSR",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -134,9 +134,9 @@ router.get("/ssr-vs.-csr/", (req, res) => {
 });
 
 // sanitization-and-npm
-router.get("/sanitization-and-npm/", (req, res) => {
+router.get("/sanitization-and-npm/", async (req, res) => {
 
-    const sanitizationPage = templateEngine.renderPage(sanitizationPath, (req.baseUrl + req.path), nameOfPage_sanitization, {
+    const sanitizationPage = await templateEngine.renderPage(sanitizationPath, (req.baseUrl + req.path), nameOfPage_sanitization, {
         tabTitle: "Security & Performance | Sanitization & NPM",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,

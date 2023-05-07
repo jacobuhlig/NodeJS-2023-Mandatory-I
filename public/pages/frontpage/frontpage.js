@@ -1,1 +1,0 @@
-console.log(`Succesfully read frontpage.js`);

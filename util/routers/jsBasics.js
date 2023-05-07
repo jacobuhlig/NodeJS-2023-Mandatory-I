@@ -11,6 +11,7 @@ const cssHighlightPath = `<link rel="stylesheet" href="/assets/css/syntax-highli
 const markdownPath = `<link rel="stylesheet" href="/assets/css/markdown.css" />`;
 
 
+
 // Content titles
 import subjects from "../subjects/subjects.js";
 const topicsNavbar = subjects.getSubjects();
@@ -25,6 +26,7 @@ const topicsContent = templateEngine.renderListElements(topicsNavbar, "");
 function endOfPath(nameOfPage) {
     return `jsBasics/${nameOfPage}/${nameOfPage}.md`;
 }
+
 
 
 // js-basics
@@ -56,8 +58,8 @@ const datePath = templateEngine.readMarkdown(pathToDate);
 
 // Endpoints
 // js-basics
-router.get("/", (req, res) => {
-    const jsBasicsPage = templateEngine.renderPage(jsBasicsPath, (req.baseUrl + req.path), nameOfPage_jsBasics, {
+router.get("/", async (req, res) => {
+    const jsBasicsPage = await templateEngine.renderPage(jsBasicsPath, (req.baseUrl + req.path), nameOfPage_jsBasics, {
         tabTitle: "Mandatory | JS Basics",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -66,10 +68,9 @@ router.get("/", (req, res) => {
     res.send(jsBasicsPage);
 });
 
-
 // Data-Type-&-Scoping
-router.get("/data-types-and-scoping/", (req, res) => {
-    const dataPage = templateEngine.renderPage(dataPath, (req.baseUrl + req.path), nameOfPage_data, {
+router.get("/data-types-and-scoping/", async (req, res) => {
+    const dataPage = await templateEngine.renderPage(dataPath, (req.baseUrl + req.path), nameOfPage_data, {
         tabTitle: "JS Basics | Data Types & Scoping",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -79,8 +80,8 @@ router.get("/data-types-and-scoping/", (req, res) => {
 });
 
 // Functions-&-Callbacks
-router.get("/functions-and-callbacks/", (req, res) => {
-    const functionsPage = templateEngine.renderPage(functionsPath, (req.baseUrl + req.path), nameOfPage_functions, {
+router.get("/functions-and-callbacks/", async (req, res) => {
+    const functionsPage = await templateEngine.renderPage(functionsPath, (req.baseUrl + req.path), nameOfPage_functions, {
         tabTitle: "JS Basics | Functions & Callbacks",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -90,8 +91,8 @@ router.get("/functions-and-callbacks/", (req, res) => {
 });
 
 // Loop-Methods
-router.get("/loop-methods/", (req, res) => {
-    const loopsPage = templateEngine.renderPage(loopsPath, (req.baseUrl + req.path), nameOfPage_loops, {
+router.get("/loop-methods/", async (req, res) => {
+    const loopsPage = await templateEngine.renderPage(loopsPath, (req.baseUrl + req.path), nameOfPage_loops, {
         tabTitle: "JS Basics | Loop Methods",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -101,8 +102,8 @@ router.get("/loop-methods/", (req, res) => {
 });
 
 // Date-&-Time
-router.get("/date-and-time/", (req, res) => {
-    const datePage = templateEngine.renderPage(datePath, (req.baseUrl + req.path), nameOfPage_date, {
+router.get("/date-and-time/", async (req, res) => {
+    const datePage = await templateEngine.renderPage(datePath, (req.baseUrl + req.path), nameOfPage_date, {
         tabTitle: "JS Basics | Date & Time",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,

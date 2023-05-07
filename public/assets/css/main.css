@@ -206,7 +206,9 @@ footer p {
 }
 
 main,
-footer {
+footer,
+textarea,
+input {
   font-family: modernSansFontRegular;
   /* color: #23AFAC; */
   /* margin-left: 3em; */

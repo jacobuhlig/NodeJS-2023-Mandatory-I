@@ -1,1 +1,0 @@
-console.log(`dataAndTime.js is running`);

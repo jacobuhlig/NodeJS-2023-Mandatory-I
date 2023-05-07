@@ -1,5 +1,4 @@
-// import matter from "gray-matter";
-// import escape from "escape-html";
+
 import fs from "fs";
 import hljs from "highlight.js";
 import {marked} from "marked";
@@ -32,7 +31,7 @@ marked.setOptions({
 
 
 
-function renderPage(page, path, folderAndFileName, config = {}) {
+async function renderPage(page, path, folderAndFileName, config = {}) {
 
   let partOfPath = path;
  
@@ -45,8 +44,19 @@ function renderPage(page, path, folderAndFileName, config = {}) {
   }
   
 
-  const url = `<script src="/pages${partOfPath}${folderAndFileName}/${folderAndFileName}.js"></script>`
-  console.log(url);
+  /* const url = `<script src="/pages${partOfPath}${folderAndFileName}/${folderAndFileName}.js"></script>`
+  console.log(url); */
+console.log(partOfPath);
+  const scriptUrl = `/pages${partOfPath}${folderAndFileName}/${folderAndFileName}.js`;
+  console.log(scriptUrl);
+
+  // Check if the file exists
+  const scriptFileExists = await fileExists(scriptUrl);
+
+  // If the file exists, include the script tag, otherwise use an empty string
+  const scriptTag = scriptFileExists
+    ? `<script src="${scriptUrl}"></script>`
+    : '';
 
 
   const navbar = fs.readFileSync("./public/components/00._navbar/navbar.html").toString()
@@ -58,7 +68,7 @@ function renderPage(page, path, folderAndFileName, config = {}) {
     .replace("$SUB_TOPIC_LIST", config.subTopics || "SubTopic");
     
     const topFooter = fs.readFileSync("./public/components/02._footer/topFooter.html").toString()
-    .replace("$SCRIPT_LINK", url || "");
+    .replace("$SCRIPT_LINK", scriptTag || "");
 
   const footer = fs.readFileSync("./public/components/02._footer/footer.html").toString()
     .replace("$FOOTER_YEAR", `© ${new Date().getFullYear()}`);
@@ -80,6 +90,7 @@ function renderFrontpage(page, config = {}) {
 
   return navbar + page + footer;
 }
+
 
 
 function renderListElements(arrayOfStrings, endpoint) {
@@ -114,17 +125,24 @@ function renderListElements(arrayOfStrings, endpoint) {
 }
 
 
+
+async function fileExists(url) {
+  try {
+    const response = await fetch(url, { method: 'HEAD' });
+    return response.status === 200;
+  } catch (error) {
+    console.error('Error while checking file existence:', error);
+    return false;
+  }
+}
+
+
+
 function capitalizeWords(str) {
   return str
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
-}
-
-
-
-function readPage(pagePath) {
-  return fs.readFileSync(pagePath).toString();
 }
 
 
@@ -141,6 +159,5 @@ export default {
   renderPage,
   renderFrontpage,
   renderListElements,
-  readPage,
   readMarkdown
 };

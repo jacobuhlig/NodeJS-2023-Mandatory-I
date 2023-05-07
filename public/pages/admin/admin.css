@@ -1,0 +1,78 @@
+main {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.outer {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 10em 0em;
+    align-items: flex-start;
+}
+
+.inner {
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+div.inner > *, button {
+    color: rgb(38, 89, 161);
+    font-size: 30px;
+}
+
+h1 {
+    padding-bottom: 1em;
+    height: 60px;
+}
+
+button {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 12px;
+    margin-top: 1em;
+    padding: 0.2em 0.5em;
+}
+
+label {
+    padding-right: 2em;
+}
+
+input, textarea {
+    border: 1px solid rgb(38, 89, 161);
+    min-height: 1em;
+    line-height: 1.5em;
+}
+
+button, input, textarea {
+    border-radius: 8px;
+}
+
+.inputWrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+    width: 100%;
+}
+
+.inputElement {
+    display: contents;
+}
+
+.inputElement label {
+    grid-column: 1;
+    text-align: left;
+}
+
+.inputElement input, .inputElement textarea {
+    grid-column: 2;
+    font-size: 18px;
+}

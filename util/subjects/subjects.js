@@ -1,4 +1,4 @@
-import subjectsData from './subjects.json' assert { type: "json" };
+import subjectsData from './subjects.json' assert { type: "json" }; // allows you to directly import JSON data as an object without having to explicitly parse it.
 
 
 export function getSubjects() {

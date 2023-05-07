@@ -11,6 +11,7 @@ const cssHighlightPath = `<link rel="stylesheet" href="/assets/css/syntax-highli
 const markdownPath = `<link rel="stylesheet" href="/assets/css/markdown.css" />`;
 
 
+
 // Content titles
 import subjects from "../subjects/subjects.js";
 const topicsNavbar = subjects.getSubjects();
@@ -56,11 +57,10 @@ const standardsPath = templateEngine.readMarkdown(pathToStandards);
 
 
 
-
 // Endpoints
 // web-architecture
-router.get("/", (req, res) => {
-    const jsBasicsPage = templateEngine.renderPage(webArchitecturePath, (req.baseUrl + req.path), nameOfPage_webArchitecture, {
+router.get("/", async (req, res) => {
+    const jsBasicsPage = await templateEngine.renderPage(webArchitecturePath, (req.baseUrl + req.path), nameOfPage_webArchitecture, {
         tabTitle: "Mandatory | Web Architecture",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -69,10 +69,9 @@ router.get("/", (req, res) => {
     res.send(jsBasicsPage);
 });
 
-
 // rest-and-crud
-router.get("/rest-and-crud/", (req, res) => {
-    const restApiPage = templateEngine.renderPage(restApiPath, (req.baseUrl + req.path), nameOfPage_restApi, {
+router.get("/rest-and-crud/", async (req, res) => {
+    const restApiPage = await templateEngine.renderPage(restApiPath, (req.baseUrl + req.path), nameOfPage_restApi, {
         tabTitle: "Web Architecture | REST and CRUD",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -82,8 +81,8 @@ router.get("/rest-and-crud/", (req, res) => {
 });
 
 // frontend-structure
-router.get("/frontend-structure/", (req, res) => {
-    const frontendPage = templateEngine.renderPage(frontendPath, (req.baseUrl + req.path), nameOfPage_frontend, {
+router.get("/frontend-structure/", async (req, res) => {
+    const frontendPage = await templateEngine.renderPage(frontendPath, (req.baseUrl + req.path), nameOfPage_frontend, {
         tabTitle: "Web Architecture | Frontend Structure",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -93,8 +92,8 @@ router.get("/frontend-structure/", (req, res) => {
 });
 
 // redirection
-router.get("/redirection/", (req, res) => {
-    const redirectionPage = templateEngine.renderPage(redirectionPath, (req.baseUrl + req.path), nameOfPage_redirection, {
+router.get("/redirection/", async (req, res) => {
+    const redirectionPage = await templateEngine.renderPage(redirectionPath, (req.baseUrl + req.path), nameOfPage_redirection, {
         tabTitle: "Web Architecture | Redirection",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -104,8 +103,8 @@ router.get("/redirection/", (req, res) => {
 });
 
 // coding-standards
-router.get("/coding-standards/", (req, res) => {
-    const standardsPage = templateEngine.renderPage(standardsPath, (req.baseUrl + req.path), nameOfPage_standards, {
+router.get("/coding-standards/", async (req, res) => {
+    const standardsPage = await templateEngine.renderPage(standardsPath, (req.baseUrl + req.path), nameOfPage_standards, {
         tabTitle: "Web Architecture | Coding-standards",
         cssLink: cssHighlightPath + markdownPath,
         subTopics: subTopicsContent,
@@ -113,6 +112,7 @@ router.get("/coding-standards/", (req, res) => {
     });
     res.send(standardsPage);
 });
+
 
 
 export { router };
